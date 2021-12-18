@@ -1,0 +1,7 @@
+{
+    'name' : 'Sathish',
+    'age' : '27'
+}
+
+
+data.productCount['name']

@@ -1,0 +1,145 @@
+<div class="container-custom checkout-webview" style="padding-top: 110px;">
+  <br>
+  <div>
+  <app-breadcrumb  category="Shopping Bag"></app-breadcrumb>
+
+  </div>
+  <div class="col-12 pl-0">
+    <div class="cart">
+      <b class="t-1">Products in Bag</b>
+    </div>
+  </div>
+  <br>
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <app-checkout-item *ngFor="let item of items" [data]="item"   ></app-checkout-item>
+    </div>
+
+    <div class="col-lg-3" >
+      <div class="bar"   style="border-left:solid 1px #00000029;margin-right: 20px;padding-left: 30px;" >
+        <h2 style="font-weight: bold; font-family: 'proxima-nova';">Order summary</h2> <br>
+      <small class="text-muted float-left">Subtotal: {{sub_total | currency:'INR'}}</small> 
+      <br>
+      <small class="text-muted float-left">Shipping: {{deliver_fee | currency:'INR'}}</small>
+      <br>
+      <small class="text-muted float-left">Discount: {{discount | currency:'INR'}}</small> 
+      <br>
+
+      <b class="float-left">Total: {{total | currency:'INR'}}</b>
+      <br>
+      <br>
+      <button (click)="deploy()" style="width: 220px" class="btn btn-block button text-center"><a class="navi rou"
+          style="color: white;background-color: green; text-decoration: none;;" routerLink="/signin">Checkout to
+          payment</a></button>
+      </div>
+    
+     <div class="bar" style="padding:20px;">
+      <div class="checkout-content">
+        <i class='bx bxs-lock-alt float-left' style="margin-top: 2px;"></i>Consumes data protection <br>
+        <i class='bx bx-check-shield float-left' style="margin-top: 3px;"></i>Secure payment with SSL <br>
+      </div> <br>
+      <h6>delivery information</h6> <br>
+      <small class="text-muted float-left">Delivery Time:</small> <small class="text-muted float-right">3 to 8 working
+        days</small><br>
+      <small class="text-muted float-left">Delivery by:</small> <small
+        class="text-muted float-right">Shippocket</small><br>
+
+     </div>
+    </div>
+  </div>
+ </div>
+<br>
+ <div class="container">
+  <div class="bottom-btn">
+    <div class="row">
+      <div class="col-lg-2">
+        <button routerLink="/wishlist" class="btn btn-block button1" style=" border: 2px solid;">Bag of Wishlist</button>
+      </div> <br> &nbsp;
+      <div class="col-lg-3">
+        <button routerLink=".." class="btn btn-block button2">Continue Shopping</button>
+      </div><br> &nbsp;
+      <div class="col-lg-4">
+        <div class="input-group mb-3">
+          <input style="text-transform:uppercase; border: 2px solid;"  #cop type="text" class="form-control" placeholder="Enter coupon / Promo code" aria-label="Enter coupon / Promo code" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn button2" type="button"  (click)="couponie(cop.value)" >&nbsp;&nbsp; Apply &nbsp;&nbsp;</button>
+          </div>
+        </div>
+        <h6 style="font-size: 13px; font-family: 'proxima-nova'; color: gray;">{{expired? 'Code Expired': invalid && cop.value? 'Invalid Code': ''}}</h6>
+        <h6 style="font-size: 13px; font-family: 'proxima-nova'; color: green;">Code Applied with {{coupon?.offer}}% Discount</h6>
+      </div>
+    </div>
+   </div>
+ </div>
+<br><br><br>
+</div>
+<br>
+
+<!-- Mobile View -->
+<div class="px-4 checkout-mobileview" style="padding-top: 100px;">
+  <div>
+    <div class="my-4">
+    <a href="" class="ml-2 mr-3"><i class="fas fa-arrow-left" ></i></a>
+  <span class="checkout-keepshopping">Keep Shopping</span>
+  </div>
+  <div class="my-2" style="clear: both;">
+  <h3 class="float-left checkout-head-h3">Shopping Bag</h3>
+  <span class="float-right checkout-editbag">Edit bag</span>
+  </div>
+  <p class="w-100" style="padding:0.6px;background-color: #000;clear: both;"></p>
+  <div style="clear: both;" class="mb-2">
+    <div class="row p-0 m-0">
+  <div class="col-4 col-sm-4 p-0">
+  <img src="../../assets/images/png/product_listing/13.png" alt="Dress image" />
+  </div>
+  <div class="col-8 col-sm-8 py-0 px-2">
+    <h4 class="checkout-head-h4 pb-0 mb-0">Stereo type Black</h4>
+    <span class="pr-2" style="font-size: 15px;">Size:</span><span style="font-size: 15px;">Large</span>
+    <span class="float-right" style="font-size: 15px;">Rs.899</span>
+    <b class="d-block my-3 pt-2" style="text-decoration:underline;">Qty:1</b>
+  </div>
+  </div>
+    </div>
+    <p class="w-100" style="padding:0.6px;background-color: #000;clear: both;"></p>
+    <div style="font-size: 15px;">
+      <span>Delivery:</span>
+      <span class="float-right">Rs.50.00</span>
+    </div>
+    <hr>
+    <div style="font-size: 15px;">
+      <span>Subtotal:</span>
+      <span class="float-right">Rs.949.59</span>
+    </div>
+    <hr>
+    <div style="font-size: 15px;">
+      <span class="font-weight-bold">Amount Payable</span>
+      <span class="float-right font-weight-bold">Rs.1998</span>
+    </div>
+    <hr>
+    <div>
+      <span style="font-size: 15px;"><input type="checkbox" class="mr-4" />I have a coupon code</span>
+    </div>
+    <hr>
+    <button class="w-100 py-2 my-2 checkout-clk-button" routerLink="/signin">Checkout</button>
+    <button class="w-100 py-2 my-2 checkout-clk-button1">Add from Wishlist<i class="fas fa-arrow-right add-checkout-i" ></i></button>
+  <div class="row zeroarmario-ad-model text-center my-5 pt-4 px-3">
+    <div class="col-3 py-0 px-1">
+      <img src="../../assets/images/png/scooter/scooter@3x.png" alt="Delivery" class="w-50" />
+      <h4 class="ad-model-h4">FREE SHIPPING OVER Rs.1500+</h4>
+    </div>
+    <div class="col-3 py-0 px-1">
+      <img src="../../assets/images/png/arrows (1) (1)/arrows (1)@3x.png" alt="Return" class="w-50" />
+      <h4 class="ad-model-h4">HASSLE-FREE RETURNS</h4>
+    </div>
+    <div class="col-3 py-0 px-1">
+      <img src="../../assets/images/png/battery@3x/battery@3x@3x.png" alt="Guarantee" class="w-50" />
+      <h4 class="ad-model-h4">SATISFACTION GUARANTEED</h4>
+    </div>
+    <div class="col-3 py-0 px-1">
+      <img src="../../assets/images/png/Security-icon/Security-icon@3x.png" alt="Secure" class="w-50" />
+      <h4 class="ad-model-h4">SECURE CHECKOUT</h4>
+    </div>
+  </div>
+  </div>
+  </div>

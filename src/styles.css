@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@media all and (min-width: 992px) {
+	.navbar{ padding-top: 0; padding-bottom: 0; }
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:0; right:0; width:100%; padding:20px;  }
+	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
+}
+
+@import url("https://use.typekit.net/bza3vcv.css");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: "proxima-nova", sans-serif;
+}
+mat-grid-tile.mat-grid-tile.cat-list{
+  height: 100%;
+}
+
+mat-grid-tile.mat-grid-tile.cat-list figure.mat-figure {
+  display: inline;
+}
+mat-grid-tile.mat-grid-tile.cat-form figure.mat-figure {
+  display: inherit;
+}
+
+td.alert-msg, span.alert-msg{
+  color:  red;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input.checkbox-error{
+  outline: 1px solid red;
+}
+div.no-recor-cat{
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+table.mat-table.cdk-table.mat-elevation-z8.product-all{
+  width:100%;
+}
+

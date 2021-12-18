@@ -1,0 +1,850 @@
+<div id="product-list-page" class="container-fluid" style="left: 0px">
+  <div id="fixed-breadcrumb"  style="padding-left: 10px;">
+    <app-breadcrumb [category]="category"></app-breadcrumb>
+  </div>
+  <div class="row">
+    <div id="fixed-collection" class="col-lg-2 col-sm-3 mobile-col">
+      <div id="productlist-web">
+      <section class="collection" id="collection" style="margin-bottom: 24px">
+        <div
+          class="accordion"
+          id="accordionExample"
+          style="border-right: solid 1px #707070;"
+        >
+          <h5
+            style="
+           
+              font-size: 16px;
+              font-weight: bold;
+              font-family: proxima-nova, sans-serif;
+            "
+          >
+            I’m looking for
+          </h5>
+          <div class="card">
+            <div class="card-header pl-0" id="headingOne">
+              <button
+               
+                class="btn-block dropdown-toggle2 text-left"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Sleeve
+              </button>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body p-0 pl-2">
+                <form>
+                  <div class="form-check" style="padding-left: 0px">
+                    <div  class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="sleeve"
+                        value="half sleeve"
+                        id="half-sleeve"
+                      />
+                      <label class="form-check-label" for="half-sleeve">
+                        Half Sleeve </label
+                      ><br />
+                    </div>
+                    <div  class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="sleeve"
+                        value="full sleeve"
+                        id="full-sleeve"
+                      />
+                      <label class="form-check-label" for="full-sleeve">
+                        Full Sleeve </label
+                      ><br /> 
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span
+              *ngFor="let s of sc"
+              (click)="addSleeve(s)"
+              style="
+                font-size: 12px;
+                margin-right: 12px;
+                color: rgba(0, 0, 0, 0.664);
+              "
+              class="form-check-label"
+              for="{{ s }}"
+            >
+              {{ s }}
+              <span
+                class="iconify"
+                style="color: rgba(0, 0, 0, 0.37)"
+                data-icon="ic:baseline-close"
+                data-inline="false"
+              ></span
+            ><br></span>
+          </div>
+          <div class="card">
+            <div class="card-header pl-0" id="headingTwo">
+              <button
+                class="btn-block dropdown-toggle2 text-left"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Colour
+              </button>
+            </div>
+            
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body p-0 pl-2">
+                <form>
+                  <div class="form-check" style="padding-left: 0px">
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="colour"
+                        id="white"
+                        value="white"
+                      />
+                      <label class="form-check-label" for="white">
+                        White </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="colour"
+                        id="blue"
+                        value="blue"
+                      />
+                      <label class="form-check-label" for="blue">
+                        Blue </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="colour"
+                        id="black"
+                        value="black"
+                      />
+                      <label class="form-check-label" for="black">
+                        Black </label
+                      ><br />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span
+              *ngFor="let s of sc"
+              (click)="addColor(s)"
+              style="
+                font-size: 12px;
+                margin-right: 12px;
+                color: rgba(0, 0, 0, 0.664);
+              "
+              class="form-check-label"
+              for="{{ s }}"
+            >
+              {{ s }}
+              <span
+                class="iconify"
+                style="color: rgba(0, 0, 0, 0.37)"
+                data-icon="ic:baseline-close"
+                data-inline="false"
+              ></span
+            ><br></span>
+          </div>
+          <div class="card">
+            <div class="card-header pl-0" id="headingThree">
+              <button
+                class="btn-block dropdown-toggle2 text-left"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Size
+              </button>
+            </div>
+            <div
+              id="collapseThree"
+              class="collapse"
+              aria-labelledby="headingThree"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body p-0 pl-2">
+                <form>
+                  <div class="form-check" style="padding-left: 0px">
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="size"
+                        id="s"
+                        value="s"
+                      />
+                      <label class="form-check-label" for="s">
+                        S </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="size"
+                        id="m"
+                        value="m"
+                      />
+                      <label class="form-check-label" for="m">
+                        M </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="size"
+                        id="l"
+                        value="l"
+                      />
+                      <label class="form-check-label" for="l">
+                        L </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="size"
+                        id="x"
+                        value="x"
+                      />
+                      <label class="form-check-label" for="x">
+                        X </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="size"
+                        id="xl"
+                        value="xl"
+                      />
+                      <label class="form-check-label" for="xl">
+                        XL </label
+                      ><br />
+                    </div>
+                    <div class="mk2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="size"
+                        id="xxl"
+                        value="xxl"
+                      />
+                      <label class="form-check-label" for="xxl">
+                        XXL </label
+                      ><br />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span
+              *ngFor="let s of ss"
+              (click)="addSize(s)"
+              style="
+                font-size: 12px;
+                margin-right: 12px;
+                color: rgba(0, 0, 0, 0.664);
+              "
+              class="form-check-label"
+              for="{{ s }}"
+            >
+              {{ s }}
+              <span
+                class="iconify"
+                style="color: rgba(0, 0, 0, 0.37)"
+                data-icon="ic:baseline-close"
+                data-inline="false"
+              ></span
+            ></span>
+          </div>
+          <div class="card">
+            <div class="card-header pl-0" id="headingFour">
+              <button
+                class="btn-block dropdown-toggle2 text-left"
+                data-toggle="collapse"
+                data-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Offers
+              </button>
+            </div>
+            <div
+              id="collapseFour"
+              class="collapse"
+              aria-labelledby="headingFour"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body p-0 pl-2">
+                <form>
+                  <div class="form-check" style="padding-left: 0px">
+                    <div  class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="sleeve"
+                        value="New In"
+                        id="new-in"
+                      />
+                      <label class="form-check-label" for="new-in">
+                        New In </label
+                      ><br />
+                    </div>
+                    <div  class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="sleeve"
+                        value="On Sale"
+                        id="on-sale"
+                      />
+                      <label class="form-check-label" for="on-sale">
+                        On Sale </label
+                      ><br /> 
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <span
+              *ngFor="let s of so"
+              (click)="addOffer(s)"
+              style="
+                font-size: 12px;
+                margin-right: 12px;
+                color: rgba(0, 0, 0, 0.664);
+              "
+              class="form-check-label"
+              for="{{ s }}"
+            >
+              {{ s }}
+              <span
+                class="iconify"
+                style="color: rgba(0, 0, 0, 0.37)"
+                data-icon="ic:baseline-close"
+                data-inline="false"
+              ></span
+            ><br></span>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
+    <div class="col-lg-10 offset-lg-2 col-sm-8 offset-sm-4 pr-md-0" style="padding-left: 1.3vw; padding-right: 1.3vw;">
+      <div class="product d-flex justify-content-between" style="padding: 0 10px;">
+        <b style="position: relative; top: -7px;" id="title-product">{{ title }}</b>
+        <p id="filter" style="position: relative; top: -7px;" class="p-2" (click)="filterSlideUp()">Filter</p>
+        <button
+          class="btn btn-c"
+          id="most-recommended"
+          style="float: right" 
+          (click)="toggleRec()"
+        >
+          MOST RECOMMENDED<i class="bx bx-down-arrow-alt"></i>
+        </button>
+      </div>
+      <!-- <br /> rv-->
+      <!-- <div class="container" style="padding-top: 5%;width: 101%;"> -->
+      <div class="container-fluid product-container">
+        <!-- <mat-grid-list cols="3">
+            <mat-grid-tile  *ngFor="let product of products">
+              <app-productitem [data]="product" ></app-productitem>
+            </mat-grid-tile>
+        </mat-grid-list> -->
+        <div class="row">
+          <div
+            class="col-6 col-lg-3 w-50"
+            id="product"
+            *ngFor="let product of products"
+          >
+            <app-productitem [data]="product"></app-productitem>
+          </div>
+          <div class="paginate col-12 d-flex justify-content-center w-100">
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li
+                  *ngFor="let page of pages"
+                  class="bottom-line {{ page == current ? 'active' : '' }}"
+                >
+                  <a class="page-link" (click)="moveTo(page)">{{ page }}</a>
+                </li>
+  
+                <li>
+                  <a class="page-link bottom-line" (click)="next()">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="productlist-mobile">
+  <div class="row w-100 d-flex justify-content-between" style="border-bottom: 1px solid gray; margin-left: 0;">
+      <h3 style="font-weight: 600;">
+        Filter & Sort
+      </h3>
+      <p style="font-weight: 600; border-bottom: 2px solid black; width: fit-content; height: fit-content;">
+        Clear all
+      </p>
+  </div>
+  <div class="row no-gutters sort-row">
+    <div class="col-12" style="padding-bottom: 10px;font-weight: bold;">
+      Sort
+    </div>
+    <div id="featured-btn" class="col sort-btn d-flex">
+      <p>Featured</p>
+    </div>
+    <div class="col sort-btn d-flex">
+      <p >Price: Low to High</p>
+    </div>
+    <div class="col sort-btn d-flex">
+      <p>Price: High to Low</p>
+    </div>
+  </div>
+<section class="collection" id="collection" style="margin-bottom: 24px">
+  <div
+    class="accordion"
+    id="accordionExampleMobile"
+  >
+  <div class="card-wrapper">
+    <div class="card">
+      <div class="card-header" id="headingOneMobile">
+        <button
+          
+          class="btn-block dropdown-toggle2 collapsed text-left"
+          data-toggle="collapse"
+          data-target="#collapseOneMobile"
+          aria-expanded="false"
+          aria-controls="collapseOneMobile"
+        >
+          Sleeve
+        </button>
+      </div>
+
+      <div
+        id="collapseOneMobile"
+        class="collapse"
+        aria-labelledby="headingOneMobile"
+        data-parent="#accordionExampleMobile"
+      >
+        <div class="card-body" style="padding-left: 0px; padding-top: 0;">
+          <form>
+            <div class="form-check" style="padding-left: 0px;">
+              <div  class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="sleeve"
+                        value="half sleeve"
+                        id="half-sleeve"
+                      />
+                      <label class="form-check-label" for="half-sleeve">
+                        Half Sleeve </label
+                      ><br />
+                    </div>
+                    <div  class="mk2">
+                      <input
+                        class="form-check-input"
+                        style="color: black"
+                        type="checkbox"
+                        name="sleeve"
+                        value="full sleeve"
+                        id="full-sleeve"
+                      />
+                      <label class="form-check-label" for="full-sleeve">
+                        Full Sleeve </label
+                      ><br /> 
+                    </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span
+        *ngFor="let s of sc"
+        (click)="addSleeve(s)"
+        style="
+          font-size: 12px;
+          margin-right: 12px;
+          color: rgba(0, 0, 0, 0.664);
+        "
+        class="form-check-label"
+        for="{{ s }}"
+      >
+        {{ s }}
+        <span
+          class="iconify"
+          style="color: rgba(0, 0, 0, 0.37)"
+          data-icon="ic:baseline-close"
+          data-inline="false"
+        ></span
+      ><br></span>
+    </div>
+  </div>
+  
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header" id="headingTwoMobile">
+          <button
+            class="btn-block dropdown-toggle2 collapsed text-left"
+            data-toggle="collapse"
+            data-target="#collapseTwoMobile"
+            aria-expanded="false"
+            aria-controls="collapseTwoMobile"
+          >
+            Colour
+          </button>
+        </div>
+        
+        <div
+          id="collapseTwoMobile"
+          class="collapse"
+          aria-labelledby="headingTwoMobile"
+          data-parent="#accordionExampleMobile"
+        >
+          <div class="card-body" style="padding-left: 0px; padding-top: 0;">
+            <form>
+              <div class="form-check" style="padding-left: 0px">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-10">
+                      <div id="checkbox-color" class="row">
+                        
+                          <div class="mk2 col-2 mr-3">
+                            <input
+                              class="form-check-input"
+                              style="color: black"
+                              type="checkbox"
+                              name="colour"
+                              id="white"
+                              value="white"
+                            />
+                            <label class="form-check-label" for="white">
+                              </label
+                            ><br />
+                          </div>
+                          <div class="mk2 col-2 mr-3">
+                            <input
+                              class="form-check-input"
+                              style="color: black"
+                              type="checkbox"
+                              name="colour"
+                              id="blue"
+                              value="blue"
+                            />
+                            <label class="form-check-label" for="blue">
+                              </label
+                            ><br />
+                          </div>
+                          <div class="mk2 col-2 mr-3">
+                            <input
+                              class="form-check-input"
+                              style="color: black"
+                              type="checkbox"
+                              name="colour"
+                              id="black"
+                              value="black"
+                            />
+                            <label class="form-check-label" for="black">
+                              </label
+                            ><br />
+                          </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span
+          *ngFor="let s of sc"
+          (click)="addColor(s)"
+          style="
+            font-size: 12px;
+            margin-right: 12px;
+            color: rgba(0, 0, 0, 0.664);
+          "
+          class="form-check-label"
+          for="{{ s }}"
+        >
+          {{ s }}
+          <span
+            class="iconify"
+            style="color: rgba(0, 0, 0, 0.37)"
+            data-icon="ic:baseline-close"
+            data-inline="false"
+          ></span
+        ><br></span>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header" id="headingThreeMobile">
+          <button
+            class="btn-block dropdown-toggle2 collapsed text-left"
+            data-toggle="collapse"
+            data-target="#collapseThreeMobile"
+            aria-expanded="false"
+            aria-controls="collapseThreeMobile"
+          >
+            Size
+          </button>
+        </div>
+        <div
+          id="collapseThreeMobile"
+          class="collapse"
+          aria-labelledby="headingThreeMobile"
+          data-parent="#accordionExampleMobile"
+        >
+          <div class="card-body" style="padding-left: 0px; padding-top: 0;">
+            <form>
+              <div class="form-check" style="padding-left: 0px">
+                <div class="mk2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="size"
+                    id="s"
+                    value="s"
+                  />
+                  <label class="form-check-label" for="s">
+                    S </label
+                  ><br />
+                </div>
+                <div class="mk2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="size"
+                    id="m"
+                    value="m"
+                  />
+                  <label class="form-check-label" for="m">
+                    M </label
+                  ><br />
+                </div>
+                <div class="mk2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="size"
+                    id="l"
+                    value="l"
+                  />
+                  <label class="form-check-label" for="l">
+                    L </label
+                  ><br />
+                </div>
+                <div class="mk2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="size"
+                    id="x"
+                    value="x"
+                  />
+                  <label class="form-check-label" for="x">
+                    X </label
+                  ><br />
+                </div>
+                <div class="mk2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="size"
+                    id="xl"
+                    value="xl"
+                  />
+                  <label class="form-check-label" for="xl">
+                    XL </label
+                  ><br />
+                </div>
+                <div class="mk2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="size"
+                    id="xxl"
+                    value="xxl"
+                  />
+                  <label class="form-check-label" for="xxl">
+                    XXL </label
+                  ><br />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span
+          *ngFor="let s of ss"
+          (click)="addSize(s)"
+          style="
+            font-size: 12px;
+            margin-right: 12px;
+            color: rgba(0, 0, 0, 0.664);
+          "
+          class="form-check-label"
+          for="{{ s }}"
+        >
+          {{ s }}
+          <span
+            class="iconify"
+            style="color: rgba(0, 0, 0, 0.37)"
+            data-icon="ic:baseline-close"
+            data-inline="false"
+          ></span
+        ></span>
+      </div>
+
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header" id="headingFourMobile">
+          <button
+            class="btn-block dropdown-toggle2 collapsed text-left"
+            data-toggle="collapse"
+            data-target="#collapseFourMobile"
+            aria-expanded="false"
+            aria-controls="collapseFourMobile"
+          >
+            Offers
+          </button>
+        </div>
+        <div
+          id="collapseFourMobile"
+          class="collapse"
+          aria-labelledby="headingFourMobile"
+          data-parent="#accordionExampleMobile"
+        >
+          <div class="card-body" style="padding-left: 0px; padding-top: 0;">
+            <form>
+              <div class="form-check" style="padding-left: 0px">
+                <div  class="mk2">
+                  <input
+                    class="form-check-input"
+                    style="color: black"
+                    type="checkbox"
+                    name="sleeve"
+                    value="New In"
+                    id="new-in"
+                  />
+                  <label class="form-check-label" for="new-in">
+                    New In </label
+                  ><br />
+                </div>
+                <div  class="mk2">
+                  <input
+                    class="form-check-input"
+                    style="color: black"
+                    type="checkbox"
+                    name="sleeve"
+                    value="On Sale"
+                    id="on-sale"
+                  />
+                  <label class="form-check-label" for="on-sale">
+                    On Sale </label
+                  ><br /> 
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span
+          *ngFor="let s of so"
+          (click)="addOffer(s)"
+          style="
+            font-size: 12px;
+            margin-right: 12px;
+            color: rgba(0, 0, 0, 0.664);
+          "
+          class="form-check-label"
+          for="{{ s }}"
+        >
+          {{ s }}
+          <span
+            class="iconify"
+            style="color: rgba(0, 0, 0, 0.37)"
+            data-icon="ic:baseline-close"
+            data-inline="false"
+          ></span
+        ><br></span>
+      </div>
+    </div>
+    <div class="row" style="margin-top:70px">
+      <div class="col-12 d-flex justify-content-center">
+        <button id="product-view-btn" (click)="filterSlideDown()">View products</button>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <button id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+

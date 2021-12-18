@@ -1,0 +1,296 @@
+.container-custom, .container-fluid {
+    margin: 0 auto;
+    width: 85.5%;
+  }
+    span {
+      cursor: pointer;
+    }
+  
+    p {
+        font-weight: bold;
+    }
+  
+    .inputbox{
+      outline:none;
+      border:none;
+      border: 1px solid #000;
+      padding: 7px 7px 7px 10px;
+      width: 70%;
+      margin-bottom: 20px;
+      font-size: 15px;
+      color:#000;
+      }
+  
+      .inputbox.postal-code {
+        width: 40%;
+      }
+    
+    button{
+      outline:none;
+      padding: 9px 7px 9px 10px;
+      width: 40%;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      color:#f3f3f3;
+      border: none;
+      background-color: #000;
+      }
+  
+  .address-label {
+      border: 1px solid #000;
+      padding: 2px 20px;
+      border-radius: 3px;
+      
+  }
+  
+  .address-label .iconify{
+      margin-right: 15px;
+      margin-top: 3px;
+      width: 20px;
+      height: 20px;
+  }
+  
+  .address-label p {
+    position: relative;
+    top: 5px;
+    font-size: 12px;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  
+  @media only screen and (min-width:768px) {
+    .container-custom {
+      margin-bottom: 40vh;
+    }
+    
+    h5 {
+      font-weight: bold;
+      font-size: calc(20px + 0.1vw);
+    }
+  
+    .highlighted {
+      list-style-type: none;
+    }
+  
+    .highlighted::before {
+      content: url('https://api.iconify.design/carbon:dot-mark.svg?height=16');
+      vertical-align: -0.125em;
+      padding-right: 0.5vw;
+    }
+    
+    }
+  
+  /* Responsiveness */
+  
+  @media only screen and (min-width:768px) and (max-width:991px) {
+    .container-custom, .container-fluid {
+      width: 82.5%;
+    }
+  }
+  
+  @media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-custom, .container-fluid {
+      width: 83.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1200px) and (max-width:1399px) {
+    .container-custom, .container-fluid {
+      width: 84.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1400px) and (max-width:1599px) {
+    .container-custom, .container-fluid {
+      width: 85.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1600px) and (max-width:1799px) {
+    .container-custom, .container-fluid {
+      width: 86.5%;
+    }
+  }
+  
+  
+  .address-btn-mob {
+    display: none;
+  }
+  
+  .address-btn {
+    display: block;
+  }
+  
+  button {
+    padding: 15px;
+  }
+  
+  @media only screen and (min-width:360px) and (max-width:767px) {
+    .container-custom, .container-fluid {
+        width: 89vw;
+    }
+  
+    .account-info, .address-book {
+      width: 100%;
+    }
+  
+    .mob-h2, .mob-btn {
+      display: block;
+    }
+  
+    
+    .myaccount-menu, .helpcenter-div-fixed, .web-h2, .web-btn  {
+      display: none;
+    }
+  
+    p, h5 {
+        font-size: 12px;
+        text-indent: 0;
+        left: 0;
+    }
+  
+  
+    .no-gap p {
+        margin-bottom: 15px;
+    }
+  
+    .heading h1 {
+        font-size: 30px;
+    }
+  
+    .heading {
+        margin-top: 150px;
+    }
+  
+    .return-policy-h3 {
+        padding-right: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h1 {
+        font-size: 16px;
+        font-weight: bolder;
+        line-height: 1.5;
+        margin-top: 30px;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  
+    span {
+      font-size: 13px;
+    }
+  
+    small {
+      font-size: 13px;
+    }
+  
+    .address-btn {
+      display: none;
+    }
+  
+    .address-btn-mob {
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  
+    .abt-us-div {
+        width: 100%;
+        text-align: center;
+    }
+  
+    .policy-cnt-li li  {
+        font-size: 12px;
+    }
+  
+    .breadcrumb-switch {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 15px;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        margin-top: 145px;
+        padding-bottom: 20px;
+    }
+  
+    .breadcrumb-switch:hover {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+  
+    #switch-btn {
+        font-size: 13px;
+        color: #fff;
+        background-color: #000;
+        padding: 5px 15px;
+        cursor: pointer;
+        text-transform: none;
+    }
+  
+    #switch-btn .iconify {
+        margin-right: 10px;
+    }
+  
+    #accordionExample button  {
+        font-size: 12px;
+    }
+  
+    .edit-btn {
+      position: relative;
+      top: -60px;
+      font-size: 14px;
+    }
+  
+    
+  
+    .log {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .log .input-cont, .notice {
+      margin: 20px 0;
+    }
+  
+    .log .input-cont input {
+      border: 1px solid #B5B5B5;
+    }
+  
+    .border1, .border2 {
+      display: none;
+    }
+  
+    .ship-address {
+      font-size: calc(16px + 0.1vw);
+      border-bottom: 1px solid #000;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1rem;
+    }
+  
+    .inputbox, .inputbox.postal-code {
+      width: 100%;
+      border-color: #CACACA;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  
+  }

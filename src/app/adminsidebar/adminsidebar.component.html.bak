@@ -1,0 +1,55 @@
+<app-admin-header></app-admin-header>
+<section class="container-fluid p-0 m-0">
+<div class="row">
+<div class="nav flex-column nav-pills col-lg-2 col-xl-2 col-md-2 p-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <!-- <div class="logo-header" >
+                <a routerLink="dashboard">
+                <img  src="assets/images/png/logo/zeroarmario.png" alt="logo" class="zeroarmario-logo">
+            </a>
+           
+            </div> -->
+           <a class="nav-link zeroarmario-nav-link admin-dashboard"  routerLink="dashboard" >
+		         	<img src="assets/images/dashboard.svg" alt="D" class="mx-4 zeroarmario-index-logo" />Dashboard
+			</a>
+       <a class="nav-link zeroarmario-nav-link" routerLink="orders" >
+         <i class="fas fa-shopping-cart mx-4 zeroarmario-index-logo"></i>Orders
+        </a>
+           <a  class="nav-link zeroarmario-nav-link" routerLink="coupons" > <img src="assets/images/vector.svg" alt="C" class="mx-4 zeroarmario-index-logo" />Coupons</a>
+            <a class="nav-link zeroarmario-nav-link" routerLink="product" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Products</a>
+            <a class="nav-link zeroarmario-nav-link" routerLink="category" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Category</a>
+            <a class="nav-link zeroarmario-nav-link" routerLink="subcategory" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Sub Category</a>
+
+            <p style="border-top: 1px solid rgba(159,162,180,0.5);margin-top:10px"></p>
+          <!---  <a class="nav-link zeroarmario-nav-link" href="./admin-site/admin-site.html"><i class="fas fa-cog zeroarmario-index-logo"></i>Site</a>--->
+          </div>
+
+  <div class="tab-content col-lg-10 col-xl-10 col-md-10 p-0" id="v-pills-tabContent nav-pills">
+      <div class="float-right admin-user-span py-xl-2 px-md-2 px-lg-4 px-md-4 px-xl-4 py-lg-2" >
+    <!-- <span style="vertical-align: super;">  <a href="">
+    My Account</a>
+  </span> -->
+  <!-- <span style="vertical-align: super;"><a href="">
+    <i class="fas fa-chevron-down"></i></a>
+</span> -->
+
+		<!-- <div class="float-right admin-home-dropdown">
+		  <div class="dropdown">
+			<button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+			<span style="width:25px; height:25px; position:relative; top: -0.2vh; margin-right:10px;" class="iconify" data-icon="bi:person" data-inline="false"></span>My Account
+			  <i class="fas fa-chevron-down mx-3" style="float: right;padding-top: 2px;font-size: 19px;"></i></button>
+			<div class="dropdown-menu text-right">
+			<a class="dropdown-item" href="./admin-edit-profile/admin-edit-profile.html">Edit Profile</a>
+			  <a class="dropdown-item" href="#">Logout</a>
+			</div>
+		  </div>
+		</div> -->
+
+
+
+      </div>
+         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+			<router-outlet></router-outlet>
+	    </div>
+		</div>
+  </div>
+  </section>

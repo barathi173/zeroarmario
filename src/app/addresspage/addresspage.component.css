@@ -1,0 +1,195 @@
+@import url("https://use.typekit.net/bza3vcv.css");
+img{
+    width:120px;
+    height:auto;
+}
+.container-custom{
+    padding-top: 8%;
+    font-family:"proxima-nova";
+    margin: 0 auto;
+    width: 86%;
+}
+.form-control-lg{
+    margin-top: 5%;
+    width: 100%;
+    background-color: none;
+    border:1px solid black;
+}
+.container-2{
+    margin-top: 17%;
+}
+#shipping{
+    margin-top: 5%;
+}
+@media (min-width: 992px) {
+    #container-2{
+        margin-top: 17%;
+    }
+ }
+@media (min-width: 1200px) {
+    #container-2{
+        margin-top: 7%;
+    }
+}
+@media (min-width: 950px ) {
+    #container-2{
+        margin-top: 7%;
+    }
+ }
+ .breadcrumb{
+     color:black;
+ }
+ input[type=text]{
+     border-radius: 0px;
+     outline: 1px solid;
+     font-family: 'proxima-nova';
+     font-size: 13px;
+ }
+ h2, h4, h1, h5, h6, h3{
+    font-family: 'proxima-nova';
+ }
+ .lines{
+     height: 0.1%;
+     width: 100%;
+     border-bottom: 1px solid #000;
+ }
+
+ .width-half {
+     width: 50%;
+ }
+
+ .form-control-lg {
+     padding: 20px;
+ }
+
+ .ordersuccess-ad-model img
+ {
+width: 20%;
+height: 40%;
+ }
+ .ordersuccess-ad-model .ordersuccess-ad-h4
+{
+    padding: 25px 33%;
+    font-weight: bold;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 15px;
+}
+.ad-models
+{
+    width: 85%;
+    margin: 20px auto;
+}
+
+.order-limitations p {
+    font-size: 12px;
+}
+
+.display-mob {
+    display: none;
+}
+
+.terms {
+    padding-left: 15px;
+}
+
+.total-price h3:nth-child(1) {
+    color: gray;
+}
+
+.line-change {
+    width: 19vw;
+}
+
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .display-mob {
+        display: block;
+    }
+
+    .display-web {
+        display: none;
+    }
+
+    .width-half {
+        width: 100%;
+    }
+
+    #ship h2 {
+        font-size: calc(16px + 0.1vw);
+        border-bottom: 1px solid #000;
+        padding-bottom: 1.6vh;
+    }
+
+    .ordersuccess-ad-model img {
+        width: 45%;
+        height: 25%;
+    }
+
+    .ordersuccess-ad-model .ordersuccess-ad-h4 {
+        font-size: calc(8px + 0.1vw);
+        padding: 25px 5px;
+    }
+
+    .order-limitations p {
+    font-size: calc(11px + 0.1vw);
+    }
+
+    .inputbox {
+        width: 100%;
+        border-color: #CACACA;
+        padding: 25px;
+        margin-bottom: 5px;
+        outline: none !important;
+      }
+
+      .address-label {
+        border: 1px solid #000;
+        padding: 2px 20px;
+        border-radius: 3px;
+        
+    }
+    
+    .address-label .iconify{
+        margin-right: 15px;
+        margin-top: 3px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .address-label p {
+      position: relative;
+      top: 5px;
+      font-size: 12px;
+    }
+    .mob-dark {
+        border-color: rgba(0, 0, 0, 1);
+    }
+
+    .terms {
+        padding-left: 0;
+    }
+
+    .line-change {
+        width: 100%;
+    }
+
+    .shopping-bag {
+        margin-top: 3vh;
+    }
+
+    .shopping-bag h1 {
+        font-size: calc(16px + 0.1vw);
+        font-weight: bold;
+    }
+
+    .total-price {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .total-price h3:nth-child(1) {
+        color: #000;
+    }
+}

@@ -1,0 +1,25 @@
+<img class="card-img-top" src="{{ data.images[0] }}" alt="" />
+<a class="btn-2" (click)="delete(pid)" style="margin: 12px;" >
+  
+  <img src="../../assets/Recycle Bin Full@2x.png" width="24px" height="24px"/>
+</a>
+<h4
+  style="
+    font-weight: bold;
+    font-family: 'proxima-nova';
+    padding-top: 12px;
+    margin-bottom: 4px;
+  "
+>
+  {{ data.name }}
+</h4>
+<h5 style="font-family: 'proxima-nova'; padding-top: 0px; margin-top: 0px">
+  Rs.{{ data.price }}
+</h5>
+<button
+  class="btn btn-dark"
+  style="border-radius: 0px; font-size: 12px; font-family: 'proxima-nova'; background-color: #1C1C1C;"
+  (click)="addToCart()"
+>
+  Add To Cart
+</button>

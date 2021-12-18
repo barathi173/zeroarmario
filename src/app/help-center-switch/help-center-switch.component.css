@@ -1,0 +1,54 @@
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .container-custom {
+        width: 89vw;
+        margin: 0 auto;
+    }
+
+    li  {
+        font-size: 12px;
+        list-style-type: none;
+        margin: 25px 0;
+    }
+
+    .heading-switch {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .heading-switch:hover {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    #switch-btn {
+        font-size: 13px;
+        color: #000;
+        background-color: #fff;
+        padding: 5px 15px;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+
+    #switch-btn:hover {
+        outline: none;
+    }
+
+    #switch-btn .iconify {
+        margin-right: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    span {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,69 @@
+<div class="container admin-dashboard">
+    <div class="row no-gutters main-div">
+        <div class="col-xl-2 col-md-2">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="col-xl-3 col-md-4 offset-md-4 offset-xl-5">
+            <span class="iconify" data-icon="ant-design:search-outlined" data-inline="false"></span>
+            <input type="text" name="search" id="search" style="outline: none;" placeholder="Search">
+        </div>
+        <div class="col-xl-2 col-md-2">
+            <select name="month" id="month">
+                <option selected value="">This month</option>
+            </select>
+        </div>
+    </div>
+    <div class= "box-div">
+        <div class=" text-center">
+            <p>Total Income</p>
+            <p>Rs.60</p>
+        </div>
+        <div class=" text-center">
+            <p>Total Orders</p>
+            <p>16</p>
+        </div>
+        <div class=" text-center">
+            <p>Total Undelivered</p>
+            <p>43</p>
+        </div>
+        <div class=" text-center">
+            <p>Total Cancelled</p>
+            <p>64</p>
+        </div>
+    </div>
+    <div class="order-details">
+    <div class="row orders">
+        <div class="col-xl-3 col-md-4">
+            <h1>Today's orders</h1>
+        </div>
+        <div class="col-xl-2 col-md-3 offset-md-4 offset-xl-5">
+            <button id="cancel-btn">Cancel</button>
+        </div>
+        <div class="col-xl-2 col-md-2 d-flex justify-content-between icon-controls">
+            <button><span class="iconify" data-icon="grommet-icons:previous" data-inline="false"></span></button>
+            <p>1 of 1</p>
+            <button><span class="iconify" data-icon="grommet-icons:next" data-inline="false"></span></button>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Order On</th>
+                    <th>Order ID</th>
+                    <th>Customer Details</th>
+                    <th>Product Details</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="noOrderMsg !== null">
+                    <td colspan="7" style="color: red;text-align:center;">{{noOrderMsg}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+.container-custom {
+    margin: 0 auto;
+    padding-top: 140px;
+}
+
+.shopping-btn {
+    background-color: #000;
+    color: #FFF;
+    padding: 15px;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: calc(13px + 0.1vw);
+}
+
+.highlighted {
+    list-style-type: none;
+  }
+
+  .highlighted::before {
+    content: url('https://api.iconify.design/carbon:dot-mark.svg?height=16');
+    vertical-align: -0.125em;
+    padding-right: 0.5vw;
+  }
+
+/* Responsiveness */
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .container-custom {
+        width: 89vw;
+    }
+
+    .order-img img {
+        width: 100px;
+    }
+
+    .order-details {
+        width: 80%;
+        margin-left: auto;
+    }
+
+    h1 {
+        font-size: calc(18px + 0.1vw);
+    }
+
+    h2 {
+        font-size: calc(16px + 0.1vw);
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .container-custom, .container-fluid {
+      width: 82.5%;
+    }
+  }
+  
+  @media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-custom, .container-fluid {
+      width: 83.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1200px) and (max-width:1399px) {
+    .container-custom, .container-fluid {
+      width: 84.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1400px) and (max-width:1599px) {
+    .container-custom, .container-fluid {
+      width: 85.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1600px) and (max-width:1799px) {
+    .container-custom, .container-fluid {
+      width: 86.5%;
+    }
+  }

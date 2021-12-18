@@ -1,0 +1,23 @@
+<div class="row" style="margin-bottom: 32px; padding-left: 0px;" *ngFor="let cursor of products; let i=index">
+<div class="col-lg-3" style="padding-left: 0px;" >
+    <img src="{{cursor.images[0]}}" alt=""/>
+  </div>
+  <div class="col-lg-4" style="padding: 20px; padding-top: 0px;">
+    <small class="float-left">Order no: {{data.oid}}</small><small
+      class="text-muted float-right"></small><br>
+    <p style="font-weight: bold;">Estimated delivery: 3 to 5 Business days</p>
+    <p style="font-weight: bold; color: black; font-size: 18px;">{{cursor.name}}</p>
+    <small class="text-muted float-left">Color: {{cursor.color}}</small> <br>
+    <small class="text-muted float-left">Size: {{data.order_items[0].size || None}}</small> <small class="text-muted float-right"></small><br>
+    <b>{{(cursor.size[data.order_items[0].size] || cursor.price) | currency: 'INR'}}</b><br>
+    <button class="btn first-btn" style="border-radius: 4px; margin-top: 12px;" (click)="addToCart(cursor, i)">Buy it again</button><br>
+  </div>&nbsp;
+  <div class="col-lg-3" *ngIf="!data.cancelled">
+    <button class="btn btn-block second-btn" style="border-radius: 4px;" (click)="track()">Track order</button><br>
+    <button class="btn btn-block third-btn" style="border-radius: 4px; " (click)="orderDetails()">Order details</button><br>
+    <button class="btn btn-block fourth-btn" style="border-radius: 4px; font-weight: bold; border: 1.5px solid;" (click)="cancel(cursor)">Cancel order</button>
+  </div>
+  <div class="col-lg-3" *ngIf="data.cancelled" style="padding-top: 0px;">
+    <p style="font-weight: bold; color: red; font-size: 18px;">Order Cancelled</p>
+  </div>
+</div>

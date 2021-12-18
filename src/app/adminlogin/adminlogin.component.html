@@ -1,0 +1,31 @@
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="box">
+                <div class="text-center logo">
+                    <img src="assets/images/png/logo/zeroarmario.png" alt="logo" >
+                </div>
+				<form [formGroup]="login_form" (ngSubmit)="onSubmitfn(login_form)">
+					<span *ngIf="errorTxt !==''" class="error"> {{errorTxt}} </span>
+					<div class="col-12 mb-4">
+						<p class="text-left mb-0">Email</p>
+						<input type="email" name="email" id="email" class="input-group" maxlength="20" placeholder="email@example.com" formControlName="email" (click)="errorTxt='';"required>
+						<span *ngIf="submitted && login.email.errors?.required" style="color:red;" > Email is required </span>
+						<span *ngIf="submitted && login.email.errors?.pattern?.requiredPattern" style="color:red;" > Invalid Email eg:abc@gmail.com </span>
+					</div>
+					<div class="col-12">
+						<p class="text-left mb-0">Password</p>
+						<input type="password" name="password" id="password" class="input-group"  maxlength="20" formControlName="pwd" required>
+						<span *ngIf="submitted && login.pwd.errors?.required" style="color:red;" > Password is required </span>
+					</div>
+					<div class="col-12 mt-4">
+						<a href="#">
+							<button class="login-btn">Login</button>
+						</a>
+					</div>
+				</form>
+            </div>
+        </div>
+    </div>
+
+
+	

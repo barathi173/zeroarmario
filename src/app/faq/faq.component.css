@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    outline: 0;
+    font-family: "proxima-nova", sans-serif;
+  }
+
+  .container-custom {
+    width: 85%;
+}
+.helpcenter-h2
+{
+    color: #000;
+    font-weight: bold;
+    font-size: 26px;
+    /* text-align: left; */
+font: normal normal 800 26px/32px;
+font-family: "proxima-nova", sans-serif;
+letter-spacing: 0.50px;
+color: #000000;
+text-transform: uppercase;
+opacity: 1;
+}
+.return-policy-div ul .return-policy-opn
+{
+list-style: none;
+font-size: 16px;
+padding: 5px 0px;
+cursor: pointer;
+}
+.helpcenter-div-fixed
+{
+    position:fixed;
+    border-right: 1px solid #707070;
+    /* bottom: 10px; */
+}
+@media only screen and (min-width:768px) {
+    .return-policy-opn1
+{
+    font-weight: bold;
+    list-style: none;
+    font-size: 16px;
+    padding: 5px 0px;
+}
+
+    .return-policy-opn1::before {
+        content: url('https://api.iconify.design/carbon:dot-mark.svg?height=16');
+        vertical-align: -0.125em;
+        padding-right: 0.5vw;
+    }
+}
+.return-policy-div a{
+    color: #000;
+
+}
+.return-policy-div a:hover
+{
+    color: #000;
+    text-decoration: none;
+}
+.return-policy-h1
+{
+    font-size: 40px;
+    text-align: left;
+letter-spacing: 0px;
+line-height: 50px;
+color: #313131;
+text-transform: uppercase;
+font-family: "proxima-nova", sans-serif;
+font-weight: bold;
+opacity: 1;
+}
+.return-policy-h3
+{
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 69px;
+    font-family: "proxima-nova", sans-serif;
+}
+.policy-cnt-li li   
+{
+    font-size: 15px;
+   padding: 10px 3px;
+}
+.policy-cnt-li
+{
+    margin-left: 15px;
+}
+.start-return-btn
+{
+    background: #000000 0% 0% no-repeat padding-box;
+opacity: 1;
+color: #fff;
+padding: 10px 20px;
+font-weight: bold;
+font-size: 16px;
+margin-top: 30px;
+
+}
+.start-return-btn:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.collapsible-link {
+    width: 100%;
+    position: relative;
+    left: -18px;
+    text-align: left;
+}
+
+
+
+#accordionExample button:focus{
+    outline: none !important;
+    border: none !important;
+   
+   
+}
+#accordionExample button{
+    font-size: 15px;
+    margin: 10px;
+    font-style: italic;
+    font-weight: 0;
+    /* text-transform:lowercase !important; */
+}
+.return-qus-btn a
+{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border: 1px solid #707070;
+border-radius: 10px;
+opacity: 1;
+color:#000;
+font-size: 14px;
+padding:8px 12px;
+margin-right: 10px;
+}
+.return-qus-btn a:hover{
+    text-decoration: none;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+    /* background: #654ea3;
+    background: -webkit-linear-gradient(to left, #654ea3, #eaafc8);
+    background: linear-gradient(to left, #654ea3, #eaafc8);
+    min-height: 100vh; */
+
+    .collapsible-link svg:nth-child(1) {
+        position: relative;
+        top: 0.5vh;
+    }
+
+    .collapsible-link svg:nth-child(2) {
+        position: relative;
+        top: 1.2vh;
+    }
+
+    .breadcrumb-switch, .display-mob {
+        display: none;
+    }
+
+    
+    @media only screen and (min-width:360px) and (max-width:767px) {
+        .container-custom {
+            width: 89vw;
+        }
+    
+        .helpcenter-div-fixed {
+            display: none;
+        }
+
+        .display-web {
+            display: none;
+            padding-left: 2vw;
+        }
+
+        .display-mob {
+            display: block;
+        }
+
+        .collapsible-link {
+            left: -10px;
+        }
+    
+        p, h5 {
+            font-size: 12px;
+            text-indent: 0;
+            left: 0;
+        }
+    
+        h5 {
+            font-size: 14px;
+        }
+    
+        .no-gap p {
+            margin-bottom: 15px;
+        }
+    
+        .heading h1 {
+            font-size: 30px;
+        }
+    
+        .heading {
+            margin-top: 150px;
+        }
+    
+        .return-policy-h3 {
+            padding-right: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    
+        .return-policy-h1 {
+            font-size: 24px;
+            font-weight: bolder;
+            line-height: 1.5;
+            margin-top: 30px;
+        }
+    
+        .start-return-btn {
+            width: 100%;
+            margin-top: 0;
+            font-size: 14px;
+        }
+    
+        .abt-us-div {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .policy-cnt-li li  {
+            font-size: 12px;
+        }
+    
+        .breadcrumb-switch {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 15px;
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    
+        .breadcrumb-switch:hover {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    
+        #switch-btn {
+            font-size: 13px;
+            color: #fff;
+            background-color: #000;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    
+        #switch-btn .iconify {
+            margin-right: 10px;
+        }
+
+        #accordionExample button  {
+            font-size: 12px;
+        }
+    }
+
+
+    /* Responsiveness */
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .container-custom, .container-fluid {
+      width: 83%;
+    }
+  }
+  
+  @media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-custom, .container-fluid {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width:1200px) and (max-width:1399px) {
+    .container-custom, .container-fluid {
+      width: 85%;
+    }
+  }
+  
+  @media only screen and (min-width:1400px) and (max-width:1599px) {
+    .container-custom, .container-fluid {
+      width: 86%;
+    }
+  }
+  
+  @media only screen and (min-width:1600px) and (max-width:1799px) {
+    .container-custom, .container-fluid {
+      width: 87%;
+    }
+  }

@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: "proxima-nova", sans-serif;
+}
+.logo-header{
+	height: 15vh;
+	text-align: 'center';
+}
+.zeroarmario-logo{
+	width: 12vw;
+	margin-left: 5%;
+}
+a.nav-link{
+	color: black;
+}
+.float-right.admin-user-span{
+	width: 100%;
+}

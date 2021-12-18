@@ -1,0 +1,117 @@
+h6{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.toplink .breadcrumb {
+  background-color: white;
+  color: black;
+}
+
+.toplink a{
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+img {
+border-radius: 2px;
+max-width: 100%;
+width: 100%;
+height: auto;
+text-align: center;
+border: none;
+}
+
+a{
+  text-decoration: underline;
+  background-color: white;
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
+  background-color: white;
+  color: black;
+  opacity: 0.7;
+}
+
+p{
+  color: green;
+}
+
+.button{
+  background-color: green;
+  color: white;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 0;
+  border: none;
+}
+
+.button:hover{
+  background-color: green;
+  color: white;
+  align-items: center;
+  padding: 10px 12px;
+  border-color: black;
+  border-radius: 0;
+  opacity: 0.7;
+  border: none;
+
+}
+
+.bottom-btn .button1{
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding: 10px 12px;
+  border-color: black;
+  border-radius: 0;
+
+}
+
+.bottom-btn .button1:hover{
+  background-color: black;
+  color: white;
+  align-items: center;
+  padding: 10px 12px;
+  border-color: black;
+  border-radius: 0;
+}
+
+
+.bottom-btn .button2{
+  background-color: black;
+  color: white;
+  align-items: center;
+  padding: 10px 12px;
+  border-color: black;
+  border-radius: 0;
+
+}
+
+.bottom-btn .button2:hover{
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding: 10px 12px;
+  border-color: black;
+  border-radius: 0;
+
+}
+input{
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding: 10px 12px;
+  border-color: black;
+  border-radius: 0;
+  height: auto;
+
+}
+.checkout-content{
+  text-align: center;
+}
+
+h2, h4, h1, h5, h6{
+  font-family: 'proxima-nova';
+}

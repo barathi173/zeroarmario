@@ -1,0 +1,44 @@
+<div class="container-fluid" style="padding-top: 140px">
+   <div class="row pl-1">
+      <app-breadcrumb category="My Account/ Account Information"></app-breadcrumb>
+   </div>
+  
+ </div>
+ <div class="container-custom">
+   <div class="row mt-md-5 mt-xs-0">
+     <div class="col-lg-4 col-xl-3 col-md-5 myaccount-menu" style = "padding: 0px 90px 0px 17px;">
+       <div class="row" style="border-right: 1px solid #707070;"> 
+         <h5 class="col-12 mb-4" style="font-family: 'proxima-nova'; font-size: 24px; text-transform: uppercase; font-weight: bold;">My account</h5>
+         <li class="side-navs my-2 col-12 highlighted" style="font-weight: bold;">Account Information</li>
+         <span class="side-navs my-2 col-12" routerLink="/changepassword"> Change Password</span> 
+         <span class="side-navs my-2 col-12" routerLink="/myorders1"> My Orders</span>
+         <span class="side-navs my-2 col-12" routerLink="/return-policy"> Help Center</span>  
+         <span class="side-navs my-2 mt-4 col-12" style="font-weight: bold; text-decoration: underline;">Logout</span>
+       </div>
+     </div>
+
+     <div class="col-lg-6">
+       <p class="ship-address">Address book</p>
+       <input type="text" class="inputbox" name="adress1" placeholder="Address line 1"><br>
+       <input type="text" class="inputbox" name="adress1" placeholder="Address line 2"><br>
+       <input type="text" class="inputbox" name="adress1" placeholder="City"><br>
+       <input type="text" class="inputbox" name="adress1" placeholder="State"><br>
+       <input type="number" class="inputbox postal-code" name="adress1" placeholder="Postal code"><br>
+       <p style="font-size: calc(14px + 0.1vw);">Would you like to label your address</p>
+       <div class="d-flex">
+           <div class="address-label mr-3 d-flex">
+               <span class="iconify" data-icon="bx:bxs-home-heart" data-inline="false"></span>
+               <p>Home</p>
+           </div>
+           <div class="address-label ml-3 d-flex">
+               <span class="iconify" data-icon="bi:briefcase-fill" data-inline="false"></span>
+               <p>Work</p>
+           </div>
+           
+       </div>
+       
+       <button class="address-btn">Save address</button>
+       <button class="address-btn-mob">Save changes</button>
+     </div>
+   </div>
+ </div>

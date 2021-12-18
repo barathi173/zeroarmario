@@ -1,0 +1,9 @@
+<ol style="padding: 0px;" class="breadcrumb" >
+
+    <li  *ngFor="let cat of cats" class="breadcrumb-item  {{cats.indexOf(cat) === (cats.length-1)? 'active': ''}}">
+        <p  style="display: {{cats.indexOf(cat) === (cats.length-1)? 'block': 'none'}}">{{cat}}</p>
+        <a href="{{routes[cats.indexOf(cat)]}}" style="display: {{cats.indexOf(cat) != (cats.length-1)? 'block': 'none'}};">{{cat}}</a>
+      </li>
+    <!-- <li class="breadcrumb-item"><a href="#">{{main_category}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{category}}</li> -->
+  </ol>

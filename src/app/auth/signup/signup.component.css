@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+.prox{
+  font-family: 'proxima-nova';
+}
+
+body {
+  background-color: #EEE;
+}
+
+.clear {
+  clear: both;
+}
+
+.log {
+  width: 420px;
+  margin: 5% auto;
+  background-color: #FFF;
+  margin-bottom: 40vh;
+}
+
+.log h2 {
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.log .input-cont {
+  position: relative;
+  
+  margin: 0 20px 20px;
+}
+
+.log .input-cont:last-of-type {
+  margin-bottom: 30px;
+
+  
+}
+
+.log .input-cont input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  color: #212121;
+  font-size: 22px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  
+}
+
+.log .input-cont input:focus {
+  outline: none;
+}
+
+.log .input-cont label {
+  position: absolute;
+  color: #948c8c;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.log .input-cont input:focus+label {
+  margin-top: -20px;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  color: #bdbdbd;
+}
+
+.log .border1, .log .border2 {
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.log .border1::after, .log .border1::before, .log .border2::after, .log .border2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.log .input-cont input:focus~.border1::after, .log .input-cont input:focus~.border1::before, .log .input-cont input:focus~.border2::after, .log .input-cont input:focus~.border2::before {
+  width: 50%;
+}
+
+.log .check, .log a {
+  float: left;
+  width: calc(50% - 50px);
+  display: block;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.log .check {
+  margin-left: 50px;
+}
+
+
+.log form input[type="submit"] {
+  display: block;
+  margin: 0 auto 20px;
+  border: 2px solid transparent;
+  padding: 5px 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ed2553;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+
+button {
+  background-color: black;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 0%;
+}
+
+button:hover {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.floating {
+  margin-bottom: 2rem;
+  
+  transition: background-color 0.2s ease;
+}
+
+
+
+.floating__input {
+  /* padding: 1.8rem 1rem 0.6rem; */
+  font-size: 1rem;
+  border: none;
+  background: none;
+  
+  /* caret-color: var(--color__accent); */
+}
+
+.floating__input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+.floating__label {
+  display: block;
+  position: relative;
+  max-height: 0;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.floating__label::before {
+  color: var(--label__color);
+  content: attr(data-content);
+  display: inline-block;
+  filter: blur(0);
+  border: none;
+  backface-visibility: hidden;
+  transform-origin: left top;
+  transition: transform 0.2s ease;
+  left: 1rem;
+  position: relative;
+}
+
+.floating__label::after {
+  bottom: 1rem;
+  content: "";
+  height: 0.1rem;
+  border: none;
+  position: absolute;
+  /* transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease; */
+  opacity: 0;
+  left: 0;
+  top: 100%;
+  margin-top: -0.1rem;
+  transform: scale3d(0, 1, 1);
+  width: 100%;
+}
+
+.floating__input:focus + .floating__label::after {
+  transform: scale3d(1, 1, 1);
+  border: none;
+  opacity: 1;
+}
+
+.floating__input:placeholder-shown + .floating__label::before {
+  transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+  border: none;
+}
+
+.floating__label::before,
+.floating__input:focus + .floating__label::before {
+  border: none;
+  transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+.floating__input:focus + .floating__label::before {
+  color: var(--color__accent);
+  border: none;
+}
+
+/* ---------------------------------------------- */
+/* --  Codepen styles & resets - not required  -- */
+/* ---------------------------------------------- */
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-family: var(--font__family);
+  font-size: var(--font__size);
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+input {
+  background: none;
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 3rem 2rem 1.5rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  background: #904e95;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media only screen and (max-width:600px) {
+  .log {
+    width: 100%;
+  }
+}
+
+#signup-mob {
+  display: none;
+}
+
+#signup-web {
+  display: block;
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+  #signup-mob {
+    display: block;
+  }
+
+  #signup-web {
+    display: none;
+  }
+  .container-custom {
+    width: 89vw;
+    margin: 0 auto;
+    margin-top: 145px;
+  }
+
+  h2 {
+    font-size: calc(16px + 0.1vw);
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+  }
+
+  .inputbox {
+    width: 100%;
+    border: 1px solid #CACACA;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .password-rules {
+    font-size: calc(10px + 0.1vw);
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .password-rules div {
+    border: 1px solid #EFEFEF;
+    padding: 5px 7px;
+    background-color: #EFEFEF;
+  }
+
+  .gender-select {
+    margin-top: 2vh;
+  }
+
+  .gender-select p {
+    font-size: calc(13px + 0.1vw);
+    color: #7D7D7D;
+    margin: auto;
+    position: relative;
+    top: 15px;
+  }
+
+  input[type="radio"] {
+    visibility: hidden;
+  }
+
+  input[type="radio"] + label::before {
+    border: 2px solid rgb(0, 0, 0);
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 13px;
+    margin: 0 0.6rem 0 0;
+    padding: 0;
+    vertical-align: start;
+    position: relative;
+    top: 3px;
+    width: 13px;
+  }
+    input[type="radio"]:checked + label::before {
+    background: transparent;
+    color: black;
+    background: url('https://api.iconify.design/emojione-monotone:white-heavy-check-mark.svg?height=10');
+    text-align: center;
+    align-content: center;
+    position: relative;
+    top: 3px;
+  }
+
+  .icon-btn {
+    position: relative;
+    float: right;
+    top: -55px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-btn .iconify {
+    opacity: 0.63;
+    width: 20px;
+    height: 20px;
+  }
+}

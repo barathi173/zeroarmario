@@ -1,0 +1,134 @@
+.toplink .breadcrumb {
+    background-color: white;
+    color: black;
+  }
+  
+  .toplink a {
+    background-color: white;
+    color: black;
+  }
+  
+  img {
+    border-radius: 2px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: none;
+  }
+  
+  h5 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .first-btn {
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+  }
+  
+  .first-btn:hover {
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+    opacity: 0.7;
+  }
+  
+  .second-btn {
+    background-color: green;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .second-btn:hover {
+    background-color: green;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+    opacity: 0.7;
+    border: none;
+  }
+  
+  .third-btn {
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .third-btn:hover {
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+    opacity: 0.7;
+    border: none;
+  }
+  
+  .fourth-btn {
+    background-color: white;
+    color: black;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+  }
+  
+  .fourth-btn:hover {
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+  }
+  
+  .completed-btn{
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px 12px;
+    border-color: black;
+    border-radius: 0;
+    opacity: 0.7;
+    border: none;
+  }
+  
+  p {
+    color: green;
+    font-size: 13px;
+  }
+    
+  a{
+    color: black;
+  }
+  a:hover{
+    color: black;
+    opacity: 0.7;
+  }
+
+  a.side-navs {
+    cursor: pointer;
+  }
+
+  .side-navs {
+    margin: 5px 0;
+  }

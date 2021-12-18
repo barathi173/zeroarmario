@@ -1,0 +1,24 @@
+<app-admin-header></app-admin-header>
+<section class="container-fluid p-0 m-0" >
+<div class="row">
+<div class="nav flex-column nav-pills col-lg-2 col-xl-2 col-md-2 p-0" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="margin-top: 65px;">
+           <a class="nav-link zeroarmario-nav-link admin-dashboard"  routerLink="dashboard" >
+		         	<img src="assets/images/dashboard.svg" alt="D" class="mx-4 zeroarmario-index-logo" />Dashboard
+			    </a>
+       <a class="nav-link zeroarmario-nav-link" routerLink="orders" >
+        <img src="assets/images/icon-svg/cart-6.svg" alt="C" class="mx-4 zeroarmario-index-logo" />Orders
+        </a>
+           <a  class="nav-link zeroarmario-nav-link" routerLink="coupons" > <img src="assets/images/vector.svg" alt="C" class="mx-4 zeroarmario-index-logo" />Coupons</a>
+            <a class="nav-link zeroarmario-nav-link" routerLink="product" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Products</a>
+            <a class="nav-link zeroarmario-nav-link" routerLink="category" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Category</a>
+            <a class="nav-link zeroarmario-nav-link" routerLink="subcategory" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Sub Category</a>
+
+            <p style="border-top: 1px solid rgba(159,162,180,0.5);margin-top:10px"></p>
+           <a class="nav-link zeroarmario-nav-link" routerLink="site" ><img src="assets/images/products.svg" class="mx-4 zeroarmario-index-logo" />Site</a>
+          </div>
+
+    <div class="tab-content col-lg-10 col-xl-10 col-md-10 p-0" id="v-pills-tabContent nav-pills">
+      <router-outlet></router-outlet>  
+		</div>
+  </div>
+  </section>

@@ -1,0 +1,65 @@
+<div class="container-fluid" style="padding-top: 140px">
+  <div class="row pl-1">
+     <app-breadcrumb category="My Account"></app-breadcrumb>
+  </div>
+  
+</div>
+
+<div class="container-custom">
+  <div class="row mt-md-5 mt-xs-0">
+    <div class="col-lg-4 col-xl-3 col-md-5 myaccount-menu" style = "padding: 0px 90px 0px 17px;">
+      <div class="row" style="border-right: 1px solid #707070;"> 
+        <h5 class="col-12 mb-4" style="font-family: 'proxima-nova'; font-size: 24px; text-transform: uppercase;">My account</h5>
+        <li class="side-navs my-2 col-12 highlighted" style="font-weight: bold;">Account Information</li>
+        <span class="side-navs my-2 col-12" routerLink="/changepassword"> Change Password</span> 
+        <span class="side-navs my-2 col-12" routerLink="/myorders1"> My Orders</span>
+        <span class="side-navs my-2 col-12" routerLink="/return-policy"> Help Center</span>  
+        <span class="side-navs my-2 mt-4 col-12" style="font-weight: bold; text-decoration: underline;" (click)="logout()">Logout</span>
+      </div>
+    </div>
+    <div class="breadcrumb-switch">
+      <div style="position: relative; top: 7px; font-size: 12pt; ">
+        <app-breadcrumb category="My Account"></app-breadcrumb>
+      </div>
+      <div>
+        <button id="switch-btn" routerLink = "/myaccount-switch"><span class="iconify" data-icon="octicon:arrow-switch-16" data-inline="false"></span>Switch</button>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-6 col-xl-5">
+      <h1 style="font-family: 'proxima-nova'; font-weight: bolder; text-transform: uppercase;">Hello,</h1>
+      <br />
+      <small class="text-muted">
+        From your dashboard you have the ability to view a snapshot of your
+        recent account activity and update your account information. Select a
+        link below to view or edit information. </small
+      ><br />
+      <br />
+
+
+      <div class="account-info">
+        <h2>Account Information</h2>
+        <hr style="height: 0.1px" />
+        <div class="d-flex justify-content-between mb-3">
+          <h5 class="float-left">Contact Information</h5>
+          <span class="edit-btn" style="margin-left: 50px; font-weight: bold; text-decoration: underline;" routerLink = "/editprofile">Edit</span>
+        </div>
+        <p>Name:   John Doe</p>
+        <div  class="d-flex justify-content-between">
+          <p>Contact no: 9687567658</p>
+        </div>
+        <p>Email:  johndoe@gmail.com</p>
+        <br />
+        <br />
+      </div>
+
+
+      <div class="address-book">
+        <h2>Address book</h2>
+        <hr style="height: 0.1px;" class="mb-4"/>
+      </div>
+
+      <span style="font-weight: bold; text-decoration: underline;" routerLink="/manageaddress">Manage Addresses</span>
+    </div>
+  </div>
+</div>
+

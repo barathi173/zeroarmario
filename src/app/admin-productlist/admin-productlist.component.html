@@ -1,0 +1,87 @@
+
+
+  <section class="container-fluid p-0 m-0">
+    <div class="row">
+      <div class="tab-content col-lg-10 col-xl-10 col-md-10 p-0" id="v-pills-tabContent nav-pills">
+         
+          <div class="products-men-div py-1" >
+            <div style="margin:60px 0 40px 0;">
+                <a href="../admin-products/admin-products.php" class="admin-navigate-link"><i class="fas fa-arrow-left"></i></a>
+                <h3 class="d-inline admin-products1-h3 px-2">{{categoryDetail.category}}</h3>
+                <a routerLink="/admin/add-product" class="d-inline admin-prodcuts-add-button">Add new</a>
+                <div class="main float-right">
+          
+                    <!-- Actual search box -->
+                    <div class="form-group has-search">
+                      <span class="fa fa-search form-control-feedback"></span>
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    
+                    <!-- Another variation with a button -->
+                   
+                  </div>
+            </div>
+            <div class="">
+                <div class="dropdown">
+                  <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">New In
+                    <i class="fas fa-chevron-down" style="float: right;padding-top: 2px;font-size: 19px;"></i></button>
+                  <div class="dropdown-menu">
+                    <h5 class="dropdown-header " style="color: #000;">New arrivials</h5>
+                    <a class="dropdown-item" href="#">New In<span class="admin-prodcuts-value">25</span></a>
+                    <a class="dropdown-item" href="#">On Sale<span class="admin-prodcuts-value">12</span></a>
+                    <h5 class="dropdown-header " style="color: #000;">Shop by Design</h5>
+                    <a class="dropdown-item" href="#">Dimension 2044<span class="admin-prodcuts-value">10</span></a>
+                    <a class="dropdown-item" href="#">Monogram<span class="admin-prodcuts-value">15</span></a>
+                    <a class="dropdown-item" href="#">Love from Boo<span class="admin-prodcuts-value">8</span></a>
+                    <h5 class="dropdown-header " style="color: #000;">Topwears</h5>
+                    <a class="dropdown-item" href="#">Round neck tees<span class="admin-prodcuts-value">18</span></a>
+                    <a class="dropdown-item" href="#">Henley t-shirts<span class="admin-prodcuts-value">13</span></a>
+                    <a class="dropdown-item" href="#">Sweatshirts<span class="admin-prodcuts-value">11</span></a>
+                    <a class="dropdown-item" href="#">Polo t-shirts<span class="admin-prodcuts-value">28</span></a>
+                    <a class="dropdown-item" href="#">Full sleeve t-shirt<span class="admin-prodcuts-value">9</span></a>
+                    <a class="dropdown-item" href="#">Bomber jacket<span class="admin-prodcuts-value">17</span></a>
+                    <a class="dropdown-item" href="#">Hoodies<span class="admin-prodcuts-value">7</span></a>
+                    <h5 class="dropdown-header " style="color: #000;">Bottom wear</h5>
+                    <a class="dropdown-item" href="#">Shorts<span class="admin-prodcuts-value">3</span></a>
+                    <a class="dropdown-item" href="#">Joggers<span class="admin-prodcuts-value">12</span></a>
+                    <h5 class="dropdown-header " style="color: #000;">Stationary</h5>
+                    <a class="dropdown-item" href="#">A5 notebook<span class="admin-prodcuts-value">5</span></a>
+                    <a class="dropdown-item" href="#">A4 notebook<span class="admin-prodcuts-value">15</span></a>
+                    <a class="dropdown-item" href="#">Yearly calender<span class="admin-prodcuts-value">8</span></a>
+                  </div>
+                </div>
+              </div>
+             <div class="row m-0 pt-4 image-container">
+                     <ng-container *ngFor="let product of productList; let i = index" >
+                      <div class="col p-0 image" >
+                        <div class="card-deck py-0 m-0">
+                            <div class="card py-0 m-0" >
+                                  <div class="card-body py-0">
+                                    <img (click)="move(product)" class="card-img-top" [src]="product.image" alt=""(error)="img.src='assets/images/noproduct.png'" #img />
+                                  </div>
+                                  <div class="card-footer py-0">
+                                    <div>
+                                      <p style="font-size: 22px; font-weight: bold;" class="float-left my-0">{{product.name}}</p>
+                                      <a href="">
+                                        <span class="float-right">
+                                        <i (click)="toggleSave()" [ngClass]="saved? 'bx bxs-bookmark text-right' : 'bx bx-bookmark text-right'"></i>
+                                        </span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer py-0">
+                                      <span style="text-decoration: line-through;font-size: 13px;">Rs.{{product.price}}</span>
+                                    <small class="" style="font-size: 16px; color: #000">Rs.{{product.price | calculatediscount: product.discount}}</small>
+                                    <p style="color:rgba(32,161,145,1);font-size: 13px;">{{product.discount}}% off</p>
+                                  </div>
+                              </div>
+                            </div>
+                       </div>
+                     </ng-container>                     
+              </div>
+           </div>
+          </div>
+    </div>
+</section>
+
+

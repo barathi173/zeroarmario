@@ -1,0 +1,14 @@
+form {
+   display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+     flex-wrap: wrap;
+  }
+div.button{
+    flex-basis: 100%; 
+    display: flex
+}
+div.checkbox{
+    margin-left: 5%;
+}
+

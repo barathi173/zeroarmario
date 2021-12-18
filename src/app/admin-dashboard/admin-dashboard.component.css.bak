@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: "proxima-nova", sans-serif;
+}
+.admin-dashboard {
+    background-color: rgba(247,248,252,1);
+    padding: 25px;
+}
+
+.admin-dashboard p {
+    font-size: 14px;
+}
+
+.main-div, .orders, .order-details {
+    padding: 20px;
+}
+
+.box-div {
+    display: flex;
+    justify-content: space-between;
+}
+.box-div div {
+    border: 1px solid rgba(223,224,235,1);
+    background-color: rgba(255,255,255,1);
+    width: 258px;
+    height: 120px;
+}
+
+.box-div div p {
+    position: relative;
+    top: 30px;
+}
+
+.box-div div :nth-child(1) {
+    color: rgba(159,162,180,1);
+}
+
+.box-div div :nth-child(2) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cancel-btn {
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+}
+
+.icon-controls button {
+    background-color: rgba(237,237,237,1);
+    width: 40px;
+}
+
+.order-details {
+    border: 1px solid rgba(223,224,235,1);
+    background-color: rgba(255,255,255,1);
+    padding: 15px;
+    margin: 25px 0 ;
+}
+
+.table thead th {
+    text-transform: uppercase;
+}

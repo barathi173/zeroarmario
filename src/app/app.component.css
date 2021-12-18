@@ -1,0 +1,13 @@
+@import url("https://use.typekit.net/bza3vcv.css");
+
+* {
+    font-family:"proxima-nova";
+}
+
+.prox{
+    font-family: 'proxima-nova';
+}
+
+h2, h4, h1, h5, h6{
+    font-family: 'proxima-nova';
+ }

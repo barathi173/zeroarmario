@@ -1,0 +1,25 @@
+
+  <ng-container>
+    <div class="card-deck">
+    <div class="card" >
+          <div class="card-body">
+            
+            <img (click)="move()" class="card-img-top" src={{data.images[0]}} alt=""  />
+          </div>
+          <div class="card-footer text-center">
+            <div>
+              <p style="font-size: 16px; font-weight: bold;" class="float-left">{{data.name}}</p>
+              <a href="">
+                <span class="float-right">
+                <i (click)="toggleSave()" class="bx {{saved? 'bxs-bookmark' : 'bx-bookmark'}} text-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="card-footer">
+            <small class="float-left" style="font-size: 14px; font-weight: 400; color: #393939;">{{data.price | currency:'INR'}}</small>
+          </div>
+      </div>
+    </div>
+  </ng-container>
+        

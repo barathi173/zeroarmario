@@ -1,0 +1,38 @@
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding-top: 5%;
+}
+
+
+.btn-2{
+    position:absolute;
+    left:72%;
+    top: 10%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    border-color: transparent;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+.material-icons{
+    color: rgb(102, 11, 11);
+    height: auto;
+    width: auto;
+    }
+.btn-dark{
+        width: 100%;
+        object-fit:cover;
+        height: 10%;   
+}
+.card{
+    border:none;
+    vertical-align: 10%;
+    padding-top: 3%;
+}
+
+h2, h4, h1, h5, h6{
+    font-family: 'proxima-nova';
+ }

@@ -1,0 +1,201 @@
+.container-1{
+    width: 86%;
+    margin: 0 auto;
+}
+#material-1{
+    color: green;
+    font-size: 60px;
+}
+
+#container-3{
+   padding-top: 1%;
+   border:2px solid;
+   margin-left: 0; 
+}
+
+#address{
+    border:2px dashed rgba(0, 0, 0, 0.411); 
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+
+#container-4{
+    border:2px solid;
+    
+}
+#container-5{
+    border:2px solid;
+   
+}
+button{
+    width:180px;
+    height:50px;
+}
+
+img{
+    width:100px;
+    height:auto;
+}
+ 
+.new4 {
+    border: 1px solid;
+  }
+
+  h2, h4, h1, h5, h6, h3{
+    font-family: 'proxima-nova';
+ }
+
+ .ordersuccess-ad-model img
+ {
+width: 20%;
+height: 40%;
+ }
+ .ordersuccess-ad-model .ordersuccess-ad-h4
+{
+    padding: 25px 33%;
+    font-weight: bold;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 15px;
+}
+.ad-models
+{
+    width: 85%;
+    margin: 20px auto;
+}
+
+#container-4 h5 {
+  color: #D60F15;
+}
+@media only screen and (max-width: 1200px) {
+    .ordersuccess-ad-model .ordersuccess-ad-h4
+    {
+        padding: 25px 60px;
+        font-weight: bold;
+        font-size: 13px;
+        font-style: italic;
+        line-height: 15px;
+    }
+}
+/* @media only screen and (min-width: 1201px) {
+    .ordersuccess-ad-model .ordersuccess-ad-h4
+    {
+        padding: 25px 85px;
+        font-weight: bold;
+        font-size: 13px;
+        font-style: italic;
+        line-height: 15px;
+    }
+} */
+
+
+/* Responsiveness */
+@media only screen and (min-width:360px) and (max-width:767px) {
+  .ad-models, .thank-you, .checkout {
+    display: none;
+  }
+
+  .checkout-mob {
+    display: block;
+    margin: 5vh auto;
+    margin-bottom: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #container-3, #container-4 {
+    margin-right: 0;
+  }
+
+  .thank-you-mob {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #2E8309;
+    padding: 10px 15px;
+    
+  }
+
+  .thank-you-mob .tick-icon {
+    margin: auto;
+  }
+
+  .thank-you-mob .message {
+    width: 100%;
+  }
+
+  .thank-you-mob .message h1 {
+    font-size: calc(15px + 0.2vw);
+    color: #FFF;
+  }
+
+  .thank-you-mob .message h5 {
+    font-size: calc(10px + 0.2vw);
+    color: #FFF;
+  }
+
+  #material-1 {
+    font-size: 35px;
+    color: #fff;
+    background-color: #2E8309;
+    border-radius: 100%;
+  }
+
+  .width-alignment h3, .width-alignment h4{
+    width: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-1 {
+    padding-top: 140px;
+  }
+
+  .thank-you-mob, .checkout-mob {
+    display: none;
+  }
+
+  .thank-you {
+    display: flex;
+  }
+
+  .checkout {
+    display: block;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .container-1 {
+      width: 82.5%;
+    }
+  }
+  
+  @media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-1 {
+      width: 83.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1200px) and (max-width:1399px) {
+    .container-1 {
+      width: 84.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1400px) and (max-width:1599px) {
+    .container-1 {
+      width: 85.5%;
+    }
+  }
+  
+  @media only screen and (min-width:1600px) and (max-width:1799px) {
+    .container-1 {
+      width: 86.5%;
+    }
+  }

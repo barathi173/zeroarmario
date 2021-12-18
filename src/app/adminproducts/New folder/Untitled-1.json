@@ -1,0 +1,22 @@
+{
+    "productCount": [
+        {
+            "_id": "61a1162d812b4046a97025c8",
+            "user": "61966c2c306e7611619f353a",
+            "category": "ddd",
+            "isFeatured": true,
+            "createdAt": "2021-11-26T17:15:25.175Z",
+            "updatedAt": "2021-11-26T17:15:25.175Z",
+            "__v": 0
+        },
+        {
+            "_id": "61a11635812b4046a97025cc",
+            "user": "61966c2c306e7611619f353a",
+            "category": "aaa",
+            "isFeatured": true,
+            "createdAt": "2021-11-26T17:15:33.037Z",
+            "updatedAt": "2021-11-26T17:15:33.037Z",
+            "__v": 0
+        }
+    ]
+}

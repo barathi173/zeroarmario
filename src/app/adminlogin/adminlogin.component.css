@@ -1,0 +1,51 @@
+.login-btn {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.login-btn:focus {
+    border: none;
+    outline: none;
+}
+
+.input-group {
+    padding: 10px 15px;
+}
+
+.container-fluid {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    width: 500px;
+    height: auto;
+    margin: auto;
+    background-color: #fff;
+    padding: 40px 25px;
+    position: relative;
+    top: 27vh;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6)
+
+}
+
+.logo {
+    position: absolute;
+    top: -10vh;
+    left: 30%
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.error{
+    color: red
+}
+

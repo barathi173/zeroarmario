@@ -1,0 +1,41 @@
+<div class="containers">
+  <div class="log" style="padding-top:130px;">
+    <div class="input-cont signin">
+      <h2 stlye="text-align-left prox" style="font-family: 'proxima-nova'; " >Sign in</h2>
+    </div>
+    <div class="authBlock">
+      <form [formGroup]="form" >
+        <div class="input-cont formGroup web" >
+          <input type="text" #email required class="formControl" formControlName="Emailadd" placeholder="Email address" style="font-size: 16px;">
+          <div class="border1" *ngIf="form.invalid">Email address is invalid</div>
+        </div>
+      </form>
+      <input type="text" #email required class="inputbox mob" placeholder="Email" style="font-size: 16px;">
+      <div id="password-web" class="input-cont formGroup">
+        <input type="password" #password required class="formControl" placeholder="Password" style="font-size: 16px;" >
+        <a class="forgot" href="">Forgot ?</a>
+        <div class="border2"></div>
+      </div>
+      <div id="password-mob">
+        <!-- Change input type to be dynamic -->
+        <input
+          [type]="fieldTextType ? 'text' : 'password'"
+          class="inputbox"
+          placeholder="Password"
+        />
+        <div class="icon-btn" (click)="toggleFieldTextType()">
+          <span class="iconify" data-icon="bi:eye-fill" data-inline="false"></span>
+        </div>
+      </div>
+      <div style="height: 32px;"></div>
+      <div class="input-cont formGroup">
+      <button type="button" style="font-family: 'proxima-nova';" class="button btn-lg btn-block" (click)="auth.SignIn(email.value, password.value)">Sign In</button>
+      </div>
+      <div (click)="move()" routeActive class="text-center create-new" style="font-size: 16px; font-weight: bold; cursor: pointer;">Create a new account</div>
+      <div class="new-user-container">
+        <button class="new-user">New user</button>
+      </div>
+    </div>
+  </div>
+</div>
+  

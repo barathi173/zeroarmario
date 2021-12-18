@@ -1,0 +1,93 @@
+!
+
+  <div id="signup-web" class="log" style="padding-top:130px;">
+    <form [formGroup]="signUpform" (ngSubmit)="ngSubmitfn()" >
+    <div class="input-cont">
+    <h2 stlye="text-align-left prox" style="font-family: 'proxima-nova'; " >Sign up</h2>
+    </div>
+
+    <div class="authBlock">
+      <div class="input-cont formGroup">
+        <input type="text" #firstName formControlName="fname" name="firstname" required class="formControl" placeholder="First Name" style="font-size: 16px;">
+        <!-- <label>First name</label> -->
+        <div class="border1"></div>
+        <span *ngIf="submitted && singupFormData.fname.errors?.required" style="color:red;" > First Name is required </span>
+      </div>
+      <div class="input-cont formGroup">
+        <input id="lastName" type="text" #lastName formControlName="lname" name="lastname" required class="formControl" placeholder="Last Name" style="font-size: 16px;">
+        <!-- <label for="lastName">Last name</label> -->
+        <div class="border1"></div>
+        <span *ngIf="submitted && singupFormData.lname.errors?.required" style="color:red;" > Last Name is required </span>
+      </div>
+      <div class="input-cont formGroup">
+        <input type="text"  #phNO required class="formControl" formControlName="phNO" name="phNO" placeholder="Phone Number" style="font-size: 16px;">
+        <!-- <label>Email address</label> -->
+        <div class="border1"></div>
+        <span *ngIf="submitted && singupFormData.phNO.errors?.required" style="color:red;" > Phone Number is required </span>
+      </div>
+      <div class="input-cont formGroup">
+        <input type="text"  #email required class="formControl" formControlName="email" name="email" placeholder="Email address" style="font-size: 16px;">
+        <!-- <label>Email address</label> -->
+        <div class="border1"></div>
+        <span *ngIf="submitted && singupFormData.email.errors?.required" style="color:red;" > Email is required </span>
+      </div>
+      <div class="input-cont formGroup">
+        <input type="password" #password required class="formControl" formControlName="password" name="password" placeholder="Password" style="font-size: 16px;" >
+        <!-- <label>Password</label> -->
+        <div class="border2"></div>
+        <span *ngIf="submitted && singupFormData.password.errors?.required" style="color:red;" > Password is required </span>
+      </div>
+      <div style="height: 32px;"></div>
+      <div class="input-cont formGroup">
+      <button  style="font-family: 'proxima-nova'; text-transform: none;" class="button btn-lg btn-block" > Create a new account</button>
+      </div>
+    </div>
+  </form>
+  </div>
+
+
+  <div id="signup-mob" class="container-custom">
+    <div class="row">
+      <div class="col-12">
+        <h2>Complete your sign up</h2>
+        <input type="text" class="inputbox" name="email" placeholder="Email">
+        <div>
+          <!-- Change input type to be dynamic -->
+          <input
+            [type]="fieldTextType ? 'text' : 'password'"
+            class="inputbox"
+            placeholder="Password"
+          />
+          <div class="icon-btn" (click)="toggleFieldTextType()">
+            <span class="iconify" data-icon="bi:eye-fill" data-inline="false"></span>
+          </div>
+        </div>
+        <div class="d-flex password-rules">
+          <div>8 Characters</div>
+          <div>1 Special char</div>
+          <div>1 Uppercase</div>
+          <div>1 Numeric</div>
+        </div>
+        <input type="text" class="inputbox" name="phone" placeholder="Phone no.">
+        <input type="text" class="inputbox" name="fullName" placeholder="Full name">
+        <div class="row gender-select no-gutters">
+          <div class="col-4">
+            <p>Select Gender: </p>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+          </div>
+        </div>
+        
+        <button class="signup-btn">Sign up</button>
+      </div>
+    </div>
+  </div>
+
+
+  

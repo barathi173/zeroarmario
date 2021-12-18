@@ -1,0 +1,95 @@
+.heading {
+    margin-top: 180px;
+}
+
+.heading h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sub-heading h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+p, h5 {
+    position: relative;
+    left: 1.5rem;
+}
+
+.container-custom {
+    width: 55%;
+    margin: 0 auto;
+}
+
+#accordionExample button:focus{
+    outline: none !important;
+    border: none !important;
+}
+#accordionExample button{
+    font-size: 16px;
+    margin: 10px 0;
+    font-style: italic;
+    font-weight: 0;
+    /* text-transform:lowercase !important; */
+}
+
+.down-icon {
+    position: absolute;
+    right: 0;
+}
+
+.collapsible-link {
+    width: 100%;
+    text-align: start;
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .container-custom {
+        width: 89vw;
+    }
+
+    p, h5 {
+        font-size: 12px;
+        text-indent: 0;
+        left: 0;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    .no-gap p {
+        margin-bottom: 15px;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .heading {
+        margin-top: 150px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .container-custom {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-custom {
+        width: 70%;
+    }
+}

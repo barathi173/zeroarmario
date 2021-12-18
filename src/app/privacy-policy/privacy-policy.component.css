@@ -1,0 +1,69 @@
+.heading {
+    margin-top: 180px;
+}
+
+.heading h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sub-heading h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+    position: relative;
+    left: 1.5rem;
+    text-indent: -1.5rem;
+}
+
+.no-indent {
+    left: 0;
+    text-indent: 0;
+}
+
+.no-gap p {margin-bottom: 0;}
+
+.container-custom {
+    width: 55%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .container-custom {
+        width: 89vw;
+    }
+
+    p {
+        font-size: 12px;
+        text-indent: 0;
+        left: 0;
+    }
+
+    .no-gap p {
+        margin-bottom: 15px;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .heading {
+        margin-top: 150px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .container-custom {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-custom {
+        width: 70%;
+    }
+}

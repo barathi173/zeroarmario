@@ -1,0 +1,34 @@
+
+<mat-grid-list cols="2">
+    <h1>Sub Category</h1>
+    <mat-grid-tile class="cat-form">
+        <form [formGroup]="subcategoryForm" (ngSubmit)="subcategorySubmit();">
+            <mat-form-field appearance="fill">
+                <mat-label>Category</mat-label>
+                  <mat-select  name="category" formControlName="category">
+                    <mat-option value="">Select</mat-option>
+                    <mat-option  *ngFor="let cat of categoryList" [value]="cat._id">{{cat.category}}</mat-option>
+                  </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Sub Category</mat-label>
+                <input matInput  name="subcategory" formControlName="subcategory">
+            </mat-form-field>
+
+            <div class="checkbox">
+                <label> Featured:  <input  type="checkbox" name="isFeatured" formControlName="isFeatured" /> </label>
+            </div>
+
+            <div class="button">
+                <button mat-button color="primary">Add</button>
+            </div>
+            
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile class="cat-list">
+            <app-list-subcategory [canReload]="reloadChild" ></app-list-subcategory>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+

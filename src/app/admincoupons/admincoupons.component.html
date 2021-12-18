@@ -1,0 +1,149 @@
+    <!-- Admin Coupons -->
+    <div class="admin-coupons " style="padding-right: 35px;">
+            <div class="row no-gutters main-div">
+                <div class="col-2">
+                    <h1 style="font-size: 28px; font-weight: bold;">Coupons</h1>
+                </div>
+                <div class="col-3 offset-xl-5">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                </div>
+                <div class="col-2" style="text-align: end;">
+                    <select name="month" id="month" style="height: 2rem; background-color: transparent; border: none;">
+                        <option selected value="">All</option>
+                        <option value="">This month</option>
+                        <option value="">This week</option>
+                        <option value="">Today</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row all-orders">
+                <div class="col-2">
+                    <p>Total Coupons <span>5</span></p>
+                </div>
+            </div>
+            <div class="order-details">
+            <div class="row orders">
+                <div class="col-3">
+                    <h1 style="font-size: 28px; font-weight: bold;">All coupons</h1>
+                </div>
+                <div id="delete-btn" class="delete-btn-container">
+                    <button>Delete</button>
+                </div>
+                <div class="col-2 offset-3">
+                    <button id="add-btn" onclick="addCoupon()">Add new</button>
+                </div>
+                <div class="col-2">
+                    <button id="cancel-btn">Cancel</button>
+                </div>
+                <div class="col-2 d-flex justify-content-between align-items-center icon-controls">
+                    <button><span class="iconify" data-icon="grommet-icons:previous" data-inline="false"></span></button>
+                    <p>1 of 1</p>
+                    <button><span class="iconify" data-icon="grommet-icons:next" data-inline="false"></span></button>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table borderless">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Code</th>
+                            <th>Expiry Date <span class="iconify" data-icon="tabler:arrows-up-down" data-inline="false" style="color: #ACACAC;"></span></th>
+                            <th>Discount <span class="iconify" data-icon="ant-design:percentage-outlined" data-inline="false"></span></th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check-box">
+                            </td>
+                            <td>
+                                <p>ZERO50</p>
+                            </td>
+                            <td>
+                                <p>29 Mar 2021</p>
+                            </td>
+                            <td>
+                                <p>50%</p>
+                            </td>
+                            
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check-box">
+                            </td>
+                            <td>
+                                <p>BLACKFRIDAY</p>
+                            </td>
+                            <td>
+                                <p>05 Apr 2021</p>
+                            </td>
+                            <td>
+                                <p>30%</p>
+                            </td>
+                            
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check-box">
+                            </td>
+                            <td>
+                                <p>WEDOFF10</p>
+                            </td>
+                            <td>
+                                <p>02 May 2021</p>
+                            </td>
+                            <td>
+                                <p>10%</p>
+                            </td>
+                            
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check-box">
+                            </td>
+                            <td>
+                                <p>ZEROARMARIONEW</p>
+                            </td>
+                            <td>
+                                <p>12 May 2021</p>
+                            </td>
+                            <td>
+                                <p>40%</p>
+                            </td>
+                            
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check-box">
+                            </td>
+                            <td>
+                                <p>RIODAY</p>
+                            </td>
+                            <td>
+                                <p>25 Nov 2021</p>
+                            </td>
+                            <td>
+                                <p>5%</p>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-2 offset-10 d-flex justify-content-between align-items-center icon-controls">
+                    <button><span class="iconify" data-icon="grommet-icons:previous" data-inline="false"></span></button>
+                    <p>1 of 1</p>
+                    <button><span class="iconify" data-icon="grommet-icons:next" data-inline="false"></span></button>
+                </div>
+            </div>
+            </div>
+        </div>

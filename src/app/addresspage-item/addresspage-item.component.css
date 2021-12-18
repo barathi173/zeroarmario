@@ -1,0 +1,60 @@
+@import url("https://use.typekit.net/bza3vcv.css");
+
+
+img{
+    width:120px;
+    height:auto;
+}
+.container{
+    padding-top: 8%;
+    font-family:"proxima-nova";
+}
+.form-control-lg{
+    margin-top: 5%;
+    width: 100%;
+    background-color: none;
+    border:1px solid black;
+}
+.container-2{
+    margin-top: 17%;
+}
+#shipping{
+    margin-top: 5%;  
+}
+@media (min-width: 992px) { 
+    #container-2{
+        margin-top: 17%;
+    }
+    #ship{
+        margin-top: 13%;
+    }
+ }
+
+
+@media (min-width: 1200px) { 
+    #container-2{
+        margin-top: 7%;
+    }
+}
+
+@media (min-width: 950px ) { 
+    #container-2{
+        margin-top: 7%;
+    } 
+    
+ }
+
+ .breadcrumb{
+     color:black;
+ }
+
+ input[type=text]{
+     border-radius: 0px;
+     outline: 1px solid;
+     font-family: 'proxima-nova';
+     font-size: 13px;
+ }
+
+ h2, h4, h1, h5, h6{
+    font-family: 'proxima-nova';
+ }

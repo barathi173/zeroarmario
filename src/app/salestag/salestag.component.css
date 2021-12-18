@@ -1,0 +1,113 @@
+
+.navbar-color {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    /* opacity: 0.95; */
+    color: black;
+  }
+  
+  .nav-items-color {
+    color: black;
+  }
+  
+  .custom-drop-down p {
+    font-weight: bold;
+  }
+  
+  .navbar-toggler-icon {
+    border: none;
+  }
+  
+  button {
+    border: none;
+  }
+  
+  @media all and (min-width: 992px) {
+    .navbar {
+      padding-top: 1%;
+      padding-bottom: 0;
+    }
+  
+    .navbar .has-megamenu {
+      position: static !important;
+    }
+  
+    .navbar .megamenu {
+      left: -5%;
+      right: 0;
+      top: 95%;
+      width: 110%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+    .navbar .nav-link {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  .nn .nav-link {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  
+  .s-left {
+    width: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .s-left {
+  
+      float: center;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+  
+  .badge-danger {
+    background-color: black;
+    padding-left: 6 px;
+    padding-right: 6px;
+    border-radius: 50%;
+  }
+  
+  .saletag{
+    /* height: 10px; */
+    /* padding: 20px; */
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .container-1{
+    background-color: black;
+    height: 20px;
+    width:100%;
+  }
+  
+  #search{
+  height: 300px;
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 35%;
+  }
+  #search-1{
+    width: 65%;
+    font-size: 18px;
+    padding-left: 0px;
+    background-color: transparent;
+      color: black;
+      outline: none;
+      outline-style: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: solid #00000093 2px;
+      border-radius: 0px;
+    
+  }

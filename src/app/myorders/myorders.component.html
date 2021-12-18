@@ -1,0 +1,219 @@
+<div class="container-fluid" style="padding-top: 140px">
+  <div class="row pl-1">
+     <app-breadcrumb category="My Account"></app-breadcrumb>
+  </div>
+ 
+</div>
+<div class="container-custom">
+  <div class="row mt-md-5 mt-xs-0">
+    <div class="col-lg-4 col-xl-3 col-md-5 myaccount-menu" style = "padding: 0px 90px 0px 17px;">
+      <div class="row" style="border-right: 1px solid #707070;"> 
+        <h5 class="col-12 mb-4" style="font-family: 'proxima-nova'; font-size: 24px; text-transform: uppercase;">My account</h5>
+        <span class="side-navs my-2 col-12" routerLink="/myaccount">Account Information</span>
+        <span class="side-navs my-2 col-12" routerLink="/changepassword"> Change Password</span> 
+        <li class="side-navs my-2 col-12 highlighted" style="font-weight: bold;"> My Orders</li>
+        <span class="side-navs my-2 col-12" routerLink="/return-policy"> Help Center</span>  
+        <span class="side-navs my-2 mt-4 col-12" style="font-weight: bold; text-decoration: underline; cursor: pointer;">Logout</span>
+      </div>
+    </div>
+    <div class="breadcrumb-switch">
+      <div>
+        <p style="font-size: calc(12px + 0.1vw); color: #000;" routerLink = "/myaccount"><span class="iconify" style="margin-right: 2vw; width: 15px; height: 15px; position: relative; top: -2px;" data-icon="ion:arrow-back-sharp" data-inline="false"></span>My Account</p>
+      </div>
+      <div>
+        <button id="switch-btn" routerLink = "/myaccount-switch"><span class="iconify" data-icon="octicon:arrow-switch-16" data-inline="false"></span>Switch</button>
+      </div>
+    </div>
+      <div class="col-xl-8 col-lg-8 col-md-7">
+        <h5  style="text-transform: uppercase; font-weight: bold; font-size: 22px ;">my orders</h5>
+        <br>
+        <div class="container">
+        <div style="border-bottom: 1px solid gray;" class="row my-0 py-2">
+          <div class="col-12">
+            <div class="row order-status">
+              <div class="col-xl-5 col-lg-7 d-flex pl-0" style="height: auto;">
+                <div style="width: 10px;height: 10px; background-color: green;border-radius: 100% ; position: relative; top: 3px;"></div>
+                <small class="pl-2">Dispatched</small>
+                <p class="pl-4 track-order">Track this order</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="order-img">
+            <img src="../../assets/images/png/cart/men.png" alt="">
+          </div>
+          <div class="pt-0 order-details" style="padding: 20px;">
+            <div class="row">
+              <div class="col-12">
+                <h3 style="font-weight: bold; margin-bottom: 0;">Tricolor highed</h3>
+              </div>
+              <div class="col-12 order-colour">
+                <div class="row">
+                  <div class="col-4">
+                    <small class="text-muted">Color:</small>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <small class="text-muted">Black</small><br>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-4">
+                    <small class="text-muted">Size:</small>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <small class="text-muted">Large/40</small><br>
+                  </div>
+                </div>
+              </div>
+              <div class="order-amount-mob col-12">
+                <small class="text-muted">Rs.899</small>
+              </div>
+              <div class="order-quantity-mob col-6">
+                <div class="row">
+                  <div class="col-6">
+                    <small class="text-muted">Qty:</small>
+                  </div>
+                  <div class="col-6">
+                    <small class="text-muted">1</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-2 order-details-btn">
+                <button class="details-btn">Order details</button><br>
+              </div>
+              <div class="col-12 mt-4 order-amount">
+                <div class="row">
+                  <div class="col-12">
+                    <small>Total amount:</small>
+                  </div>
+                  <div class="col-12">
+                    <b>Rs.899</b>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>&nbsp;
+          <div class="order-details-btn-mob">
+            <button class="details-btn">Order details</button>
+          </div>
+          <div class="order-btns">
+            <div class="row">
+              <div class="col-12">
+                <button class="btn btn-block second-btn">Buy this again</button>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-12">
+                <button class="btn btn-block fourth-btn" routerLink = "/return-policy-option">Cancel order</button>
+              </div>
+            </div>
+            <div class="row cancel-info-container">
+              <span class="iconify" data-icon="akar-icons:circle-alert" data-inline="false" style="color: #A31C1C;position: relative; left: 10px;"></span>
+                <small class="cancel-info">This applies only for 24 hours from the time of purchase</small>
+            </div>
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid #000" class="row mt-4 py-2">
+          <div class="col-12">
+            <div class="row order-status">
+              <div class="col-xl-5 col-lg-7 d-flex pl-0" style="height: auto;">
+                <div style="width: 10px;height: 10px; background-color: black;border-radius: 100% ; position: relative; top: 3px;"></div>
+                <small class="pl-2 delivered">Delivered on: 22nd march 2019</small>
+              </div>
+            </div>
+            
+          </div>
+          <div class="order-img">
+            <img src="../../assets/images/png/cart/men.png" alt="">
+          </div>
+          <div class="order-details pt-0" style="padding: 20px;">
+            <div class="row">
+              <div class="col-12">
+                <h3 style="font-weight: bold; margin-bottom: 0;">Originally stamped</h3>
+              </div>
+              <div class="col-12 order-colour">
+                <div class="row">
+                  <div class="col-4">
+                    <small class="text-muted">Color:</small>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <small class="text-muted">White</small><br>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-4">
+                    <small class="text-muted">Size:</small>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <small class="text-muted">Extra small/34</small><br>
+                  </div>
+                </div>
+              </div>
+              <div class="order-amount-mob col-12">
+                <small class="text-muted">Rs.1299</small>
+              </div>
+              <div class="order-quantity-mob col-6">
+                <div class="row">
+                  <div class="col-6">
+                    <small class="text-muted">Qty:</small>
+                  </div>
+                  <div class="col-6">
+                    <small class="text-muted">1</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-2 order-details-btn">
+                <button class="details-btn">Order details</button><br>
+              </div>
+              <div class="col-12 mt-4 order-amount">
+                <div class="row">
+                  <div class="col-12">
+                    <small>Total amount:</small>
+                  </div>
+                  <div class="col-12">
+                    <b>Rs.1299</b>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>&nbsp;
+          <div class="order-details-btn-mob">
+            <button class="details-btn">Order details</button>
+          </div>
+  
+          <div class="order-btns">
+            <div class="row">
+              <div class="col-12">
+                <button class="btn btn-block second-btn">Buy this again</button>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-12">
+                <button class="btn btn-block completed-btn" routerLink = "/return-policy-option">Cancel Order</button>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-12">
+                <button class="btn btn-block fourth-btn" routerLink = "/return-exchange-form">Return & Exchange</button>
+              </div>
+            </div>
+            <div class="row cancel-info-container">
+              <span class="iconify" data-icon="akar-icons:circle-alert" data-inline="false" style="color: #A31C1C; position: relative; left: 10px;"></span>
+                <small class="cancel-info">This applies only from 7 days of your purchase</small>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+

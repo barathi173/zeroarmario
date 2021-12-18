@@ -1,0 +1,85 @@
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Order, OrderItem } from '../address.model';
+import { AuthenticationService } from '../authentication.service';
+import { Cartitem } from '../cartitem';
+import { Product } from '../product.model';
+import { ProductsService } from '../products.service';
+
+@Component({
+  selector: 'app-myorders-lists',
+  templateUrl: './myorders-lists.component.html',
+  styleUrls: ['./myorders-lists.component.css']
+})
+export class MyordersListsComponent implements OnInit {
+
+  constructor(private firestore: AngularFirestore,
+    private route: ActivatedRoute,
+     private service: ProductsService,
+      private auth: AuthenticationService, 
+      private router: Router) {}
+
+ OID: string = ""
+
+ items!: Cartitem[];
+ UID: string = "";
+ mm: string = "Prepaid";
+
+ order!: Order
+
+ products!: Product[];
+
+ orders: Order[];
+
+ ngOnInit(): void {
+   //this.OID = this.route.snapshot.paramMap.get("oid")||""
+
+   this.firestore.collection('users').ref.limit(1).get().then(e => {
+     this.auth.getUID().then(uu => {
+       this.UID = uu
+      this.firestore.collection('orders', ref => 
+        ref.orderBy('order_date', 'desc').where('comment', '==', this.UID)
+      ).snapshotChanges().subscribe(d => {
+        this.orders = d.map((e) => ({
+          doc_id: e.payload.doc.id, ...(e.payload.doc.data() as Object)
+        } as Order)
+        )
+      });
+     })     
+   })
+ }
+
+ amounts: number[] = [];
+
+ sub_total: number = 0;
+ total: number = 0;
+
+ deliver_fee: number = 100
+ discount: number = 0
+
+
+ async getProduct(p: OrderItem) {
+   var d = await this.firestore.collection('products').doc(p.sku.replace(p.name, '')).ref.get();
+   var pr = {id: d.id,...(d.data() as object)}as Product;
+   pr.price = pr.size[p.size] || pr.price
+   this.products.push(pr)
+
+   if(this.items.length == this.amounts.length && this.items.length != 0){
+     this.calculateT()
+   }
+ }
+
+
+ calculateT(){
+   this.sub_total = this.order.sub_total
+   this.discount = this.order.total_discount;
+   this.deliver_fee = this.order.shipping_charges;
+   this.total = this.sub_total + this.deliver_fee - this.discount;
+ }
+
+ logout(){
+   
+ }
+
+}

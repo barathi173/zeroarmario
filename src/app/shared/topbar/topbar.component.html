@@ -1,0 +1,689 @@
+
+<div class="header fixed-top">
+  <div id="topbar" class="top-bar">
+    <p>Get 50% off on selected products, not available on COD</p>
+  </div>
+  <nav id="navbar" class="navbar navbar-expand-md navbar-light navbar-color hover-change">
+    <!--Mobile view-->
+    <div id="mobile-view" class="container-fluid no-space">
+      <div id="mobile-topnav" class="d-flex justify-content-between">
+        <button id="mobile-navbar-toggle-btn" class="navbar-toggler navbar-toggler-left x collapsed" style="padding-left: 5.5vw;" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click) = "profileClose()">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand mx-auto ml-lg-5" style="margin: auto 0;" href="#">
+          <img src="../../../assets/images/png/logo/zeroarmario.png" width="150px" style="margin: auto 0;" alt="logo" class="logo-image"/>
+        </a>
+        
+        <div class="checkout-item">
+          <div style="padding-right: 4.5vw;">
+            <div class="checkout-cart" routerLink = "checkout/">
+              <p id="cart-count">{{ cart_count }}</p>
+            </div> 
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- <div class="products-cart-div">
+        <p class="product-cart-head">Your bag is currently empty<p>
+          <div class="mb-5">
+        <span class="products-cart-af">View bag</span>
+        <span class="products-cart-as ">Wishlist</span>
+        </div>
+      </div> -->
+
+
+      <div class="collapse navbar-collapse mr-lg-5" id="navbarText">
+          <ul id="navbar-tree-menu" class="navbar-nav ml-auto">
+            <li class="nav-item mx-2 animated fadeInDown">
+              <div class="d-flex nav-link justify-content-between">
+                <input id="search-1" type="text" class="form-control" placeholder="Search..."/>
+                <a href="">
+                  <img class="s-img-1"
+                  src="../../../assets/images/svg/Search.svg"
+                  style="width: 15px"
+                />
+                </a>
+              </div>
+            </li>
+            <li id="menu-women-mob" class="nav-item mx-2 animated fadeInDown">
+              <ul class="tree">
+                <li class="section">
+                  <input type="checkbox" id="women"/>
+                  <label class="label" for="women">Women</label>
+                  <ul>
+                    <li class="section first-level">
+                      <input type="checkbox" id="womenA"/>
+                      <label for="womenA">New Arrivals</label>
+                      <ul class="second-level">
+                       <li>New In</li>
+                       <li>On Sale</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="womenB"/>
+                      <label for="womenB">Shop By Design</label>
+                      <ul class="second-level">
+                        <li>Dimension 2044</li>
+                        <li>Monogram</li>
+                        <li>Love from Boo</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="womenC"/>
+                      <label for="womenC">Topwears</label>
+                      <ul class="second-level">
+                        <li><a href="">Half sleeve</a></li>
+                        <li><a href="">Hoodies</a></li>
+                        <li><a href="">Boyfriend shirt</a></li>
+                        <li><a href="">Crop top</a></li>
+                        <li><a href="">Tank top</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="womenD"/>
+                      <label for="womenD">Bottom wear</label>
+                      <ul class="second-level">
+                        <li><a href="">Boxers</a></li>
+                        <li><a href="">Pyjamas</a></li>
+                        <li><a href="">Joggers</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="womenE"/>
+                      <label for="womenE">Stationary</label>
+                      <ul class="second-level">
+                        <li><a href="">A5 notebook</a></li>
+                        <li><a href="">A4 notebook</a></li>
+                        <li><a href="">Yearly calender</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="menu-men-mob" class="nav-item mx-2 animated fadeInDown">
+              <ul class="tree">
+                <li class="section">
+                  <input type="checkbox" id="men"/>
+                  <label class="label" for="men">Men</label>
+                  <ul>
+                    <li class="section first-level">
+                      <input type="checkbox" id="MenA"/>
+                      <label for="MenA">New Arrivals</label>
+                      <ul class="second-level">
+                       <li>New In</li>
+                       <li>On Sale</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="MenB"/>
+                      <label for="MenB">Shop By Design</label>
+                      <ul class="second-level">
+                        <li>Dimension 2044</li>
+                        <li>Monogram</li>
+                        <li>Love from Boo</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="MenC"/>
+                      <label for="MenC">Topwears</label>
+                      <ul class="second-level">
+                        <li><a href="">Round neck tees</a></li>
+                        <li><a href="">Henley t-shirts</a></li>
+                        <li><a href="">Sweatshirts</a></li>
+                        <li><a href="">Polo t-shirts</a></li>
+                        <li><a href="">Full sleeve t-shirts</a></li>
+                        <li><a href="">Bomber jacket</a></li>
+                        <li><a href="">Hoodies</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="MenD"/>
+                      <label for="MenD">Bottom wear</label>
+                      <ul class="second-level">
+                        <li><a href="">Shorts</a></li>
+                        <li><a href="">Joggers</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="MenE"/>
+                      <label for="MenE">Stationary</label>
+                      <ul class="second-level">
+                        <li><a href="">A5 notebook</a></li>
+                        <li><a href="">A4 notebook</a></li>
+                        <li><a href="">Yearly calender</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="menu-children-mob" class="nav-item mx-2 animated fadeInDown">
+              <ul class="tree">
+                <li class="section">
+                  <input type="checkbox" id="children"/>
+                  <label class="label" for="children">Children's</label>
+                  <ul>
+                    <li class="section first-level">
+                      <input type="checkbox" id="childrenA"/>
+                      <label for="childrenA">New Arrivals</label>
+                      <ul class="second-level">
+                       <li>New In</li>
+                       <li>On Sale</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="childrenB"/>
+                      <label for="childrenB">Shop By Design</label>
+                      <ul class="second-level">
+                        <li>Dimension 2044</li>
+                        <li>Monogram</li>
+                        <li>Love from Boo</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="childrenC"/>
+                      <label for="childrenC">Topwears</label>
+                      <ul class="second-level">
+                        <li><a href="">Half-sleeve</a></li>
+                        <li><a href="">Full-sleeve</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="childrenD"/>
+                      <label for="childrenD">Bottom wear</label>
+                      <ul class="second-level">
+                        <li><a href="">Shorts</a></li>
+                        <li><a href="">Joggers</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="childrenE"/>
+                      <label for="childrenE">Stationary</label>
+                      <ul class="second-level">
+                        <li><a href="">A5 notebook</a></li>
+                        <li><a href="">A4 notebook</a></li>
+                        <li><a href="">Yearly calender</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="menu-home-mob" class="nav-item mx-2 animated fadeInDown">
+              <ul class="tree">
+                <li class="section">
+                  <input type="checkbox" id="home"/>
+                  <label class="label" for="home">Home</label>
+                  <ul>
+                    <li class="section first-level">
+                      <input type="checkbox" id="homeA"/>
+                      <label for="homeA">New Arrivals</label>
+                      <ul class="second-level">
+                       <li>New In</li>
+                       <li>On Sale</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="homeB"/>
+                      <label for="homeB">Shop By Design</label>
+                      <ul class="second-level">
+                        <li>Dimension 2044</li>
+                        <li>Monogram</li>
+                        <li>Love from Boo</li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="homeC"/>
+                      <label for="homeC">Living</label>
+                      <ul class="second-level">
+                        <li><a href="">Long pillow covers</a></li>
+                        <li><a href="">Sofa cushions</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="homeD"/>
+                      <label for="homeD">Beddings</label>
+                      <ul class="second-level">
+                        <li><a href="">Single size covers</a></li>
+                        <li><a href="">Queen size covers</a></li>
+                        <li><a href="">King size covers</a></li>
+                      </ul>
+                    </li>
+                    <li class="section first-level">
+                      <input type="checkbox" id="homeE"/>
+                      <label for="homeE">Stationary</label>
+                      <ul class="second-level">
+                        <li><a href="">A5 notebook</a></li>
+                        <li><a href="">A4 notebook</a></li>
+                        <li><a href="">Yearly calender</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="link-account" style="color: #000;" class="nav-item-mobile mx-2 display-toggle" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" routerLink = "/myaccount" (click) = "profileClose()">
+                <span>
+                  My Account
+                </span>
+            </li>
+            <li id="link-wishlist" style="color: #000;" class="nav-item-mobile mx-2 display-toggle" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" routerLink = "/wishlist" (click) = "profileClose()">
+              <span>
+                Wishlist
+              </span>
+          </li>
+            <li id="profile" class="nav-item mx-2 animated fadeInDown nav-item-mobile" (click) = profileOpen()>
+              <span class="icon-model">
+                <i class="fas fa-user" style="width: 15px;"></i>
+              </span>
+              <span>Profile</span>
+            </li>
+            <li id="menu-support-mob" class="nav-item mx-2 animated fadeInDown nav-item-mobile" routerLink = "/myaccount" style="margin-bottom: 100px;">
+                <span class="icon-models" style="width: 15px;">i</span>
+                <span>
+                  Support Area
+                </span>
+          </li>
+          </ul>
+      </div>
+    </div>
+
+
+
+
+
+    <!--Web view-->
+    <div id="web-view" class="container-fluid">
+      <a href="#"><img src="../../../assets/images/png/logo/zeroarmario.png" width="150px" class="logo-image s-img-4"/></a>
+      <button id="toggle-btn" style="position:absolute;left:10px;top:12px"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span id="toggle-target" class="navbar-toggler-icon" ></span> 
+      </button>
+      <!--start ul-->
+      <div id="formobdiv" >
+      <ul class="navbar-nav ml-auto d-flex flex-row" id="formob">
+        <a class="nav-link" href="" data-toggle="dropdown">
+          <img class="s-left s-img-1"
+            src="../../../assets/images/svg/Search.svg"
+            style="width: 15px"
+        /></a>
+        <div class="dropdown-menu megamenu" id="search">
+          <input id="search-1" type="text" class="form-control" placeholder="Search"/>
+        </div>
+  
+        <li class="nav-item dropdown position-relative">
+          <a
+            class="nav-link "
+            href="myaccount"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img
+              class="s-left s-img-2"
+              src="../../../assets/images/svg/Person.svg"
+              style="width: 15px"
+            />
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="wishlist">Wishlist</a>
+            <a class="dropdown-item" href="myaccount">Your Account</a>
+          </div>
+        </li>
+        <a class="nav-link" href="checkout">
+          <div class="badge badge-danger s-img-3">
+            <span >{{ cart_count }}</span>
+          </div>
+        </a>
+      </ul>
+    </div>
+      <!--end ul-->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mobile-nav" style="font-size: 14px; font-weight: 500; margin-left: 20px;">
+          <li class="nav-item dropdown has-megamenu dropdown1"> 
+            <a
+              class="alignment" data-toggle="dropdown" >
+              Women
+            </a>
+            <div class="dropdown-menu megamenu dropdown-menu1">
+              <div class="custom-drop-down">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-3">
+                    <p>New arrivals</p>
+                    <li><a href="">New In</a></li>
+                    <li><a href="">On Sale</a></li>
+                    <br />
+                    <p>Shop by Design</p>
+                    <li><a href="">Dimension 2044</a></li>
+                    <li><a href="">Monogram</a></li>
+                    <li><a href="">Love from Boo</a></li>
+                  </div>
+                  <div class="col-3">
+                    <p>Topwears</p>
+                    <li><a href="">Half sleeve</a></li>
+                      <li><a href="">Hoodies</a></li>
+                      <li><a href="">Boyfriend shirt</a></li>
+                      <li><a href="">Crop top</a></li>
+                      <li><a href="">Tank top</a></li>
+                  </div>
+                  <div class="col-5">
+                    <p>Bottom wear</p>
+                    <li><a href="">Boxers</a></li>
+                    <li><a href="">Pyjamas</a></li>
+                    <li><a href="">Joggers</a></li>
+                    <br />
+                    <p>Stationary</p>
+                    <li><a href="">A5 notebook</a></li>
+                    <li><a href="">A4 notebook</a></li>
+                    <li><a href="">Yearly calender</a></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1"></div>
+                  <!--     
+      <div class="col-3">Polo-t-shirts
+        <li>Full sleeve t-shirt</li>
+        <li>Bommer jacket</li>
+        <li>Hoddles</li>
+      </div> -->
+                  <div class="col-5"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown has-megamenu dropdown2">
+            <a
+              class="alignment"
+              (click)="setCurrent('Men')"
+              data-toggle="dropdown"
+            >
+              Men
+            </a>
+            <div class="dropdown-menu megamenu dropdown-menu2">
+              <div class="custom-drop-down">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-3">
+                    <p>New arrivals</p>
+                    <li><a href="">New In</a></li>
+                    <li><a href="">On Sale</a></li>
+                    <br />
+                    <p>Shop by Design</p>
+                    <li><a href="">Dimension 2044</a></li>
+                    <li><a href="">Monogram</a></li>
+                    <li><a href="">Love from Boo</a></li>
+                  </div>
+                  <div class="col-3">
+                    <p>Topwears</p>
+                    <li><a href="">Round neck tees</a></li>
+                    <li><a href="">Henley t-shirts</a></li>
+                    <li><a href="">Sweatshirts</a></li>
+                    <li><a href="">Polo t-shirts</a></li>
+                    <li><a href="">Full sleeve t-shirts</a></li>
+                    <li><a href="">Bomber jacket</a></li>
+                    <li><a href="">Hoodies</a></li>
+                  </div>
+                  <div class="col-5">
+                    <p>Bottom wear</p>
+                    <li><a href="">Shorts</a></li>
+                    <li><a href="">Joggers</a></li>
+                    <br />
+                    <p>Stationary</p>
+                    <li><a href="">A5 notebook</a></li>
+                    <li><a href="">A4 notebook</a></li>
+                    <li><a href="">Yearly calender</a></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1"></div>
+                  <!--     
+      <div class="col-3">Polo-t-shirts
+        <li>Full sleeve t-shirt</li>
+        <li>Bommer jacket</li>
+        <li>Hoddles</li>
+      </div> -->
+                  <div class="col-5"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown has-megamenu dropdown3">
+            <a
+              class="alignment"
+              (click)="setCurrent('Children')"
+              data-toggle="dropdown"
+            >
+              Children
+            </a>
+            <div class="dropdown-menu megamenu dropdown-menu3">
+              <div class="custom-drop-down">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-3">
+                    <p>New arrivals</p>
+                    <li><a href="">New In</a></li>
+                    <li><a href="">On Sale</a></li>
+                    <br />
+                    <p>Shop by Design</p>
+                    <li><a href="">Dimension 2044</a></li>
+                    <li><a href="">Monogram</a></li>
+                    <li><a href="">Love from Boo</a></li>
+                  </div>
+                  <div class="col-3">
+                    <p>Topwears</p>
+                    <li><a href="">Half-sleeve</a></li>
+                    <li><a href="">Full-sleeve</a></li>
+                  </div>
+                  <div class="col-5">
+                    <p>Bottom wear</p>
+                    <li><a href="">Shorts</a></li>
+                    <li><a href="">Joggers</a></li>
+                    <br />
+                    <p>Stationary</p>
+                    <li><a href="">A5 notebook</a></li>
+                    <li><a href="">A4 notebook</a></li>
+                    <li><a href="">Yearly calender</a></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1"></div>
+                  <!--     
+      <div class="col-3">Polo-t-shirts
+        <li>Full sleeve t-shirt</li>
+        <li>Bommer jacket</li>
+        <li>Hoddles</li>
+      </div> -->
+                  <div class="col-5"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown has-megamenu">
+            <a
+              class="alignment"
+              (click)="setCurrent('Children')"
+              data-toggle="dropdown"
+            >
+              Home
+            </a>
+            <div class="dropdown-menu megamenu">
+              <div class="custom-drop-down">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-3">
+                    <p>New arrivals</p>
+                    <li><a href="">New In</a></li>
+                    <li><a href="">On Sale</a></li>
+                    <br />
+                    <p>Shop by Design</p>
+                    <li><a href="">Dimension 2044</a></li>
+                    <li><a href="">Monogram</a></li>
+                    <li><a href="">Love from Boo</a></li>
+                  </div>
+                  <div class="col-3">
+                    <p>Livings</p>
+                    <li><a href="">Long pillow covers</a></li>
+                    <li><a href="">Sofa cushions</a></li>
+                  </div>
+                  <div class="col-5">
+                    <p>Beddings</p>
+                    <li><a href="">Single size covers</a></li>
+                    <li><a href="">Queen size covers</a></li>
+                    <li><a href="">King size covers</a></li>
+                    <br />
+                    <p>Stationary</p>
+                    <li><a href="">A5 notebook</a></li>
+                    <li><a href="">A4 notebook</a></li>
+                    <li><a href="">Yearly calender</a></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1"></div>
+                  <!--     
+      <div class="col-3">Polo-t-shirts
+        <li>Full sleeve t-shirt</li>
+        <li>Bommer jacket</li>
+        <li>Hoddles</li>
+      </div> -->
+                  <div class="col-5"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      
+        <ul class="navbar-nav ml-auto d-flex flex-row" id="forweb">
+           
+        <li class="nav-item dropdown dropdown4">
+          <a class="nav-link dropdown4 search-logo" href="" data-toggle="dropdown">
+            </a>
+          <div class="dropdown-menu megamenu dropdown-menu4" id="search">
+            <input 
+              id="search-1"
+              type="text"
+              class="form-control"
+              placeholder="Search"
+            />
+          </div>
+
+        </li>
+          <!-- <a class="nav-link" href="myaccount"><img
+              class="s-left"
+              src="../../../assets/images/svg/Person.svg"
+              style="width: 15px"
+          /></a> -->
+          <!-- <li class="nav-item dropdown has-megamenu dropdown3">
+            <a
+              class="nav-link hover"
+              (click)="setCurrent('Children')"
+              data-toggle="dropdown"
+              style="color: black"
+            >
+              Children
+            </a> 
+          
+            <li class="nav-item dropdown has-megamenu dropdown3">
+            <a
+              class="nav-link hover"
+              (click)="setCurrent('Children')"
+              data-toggle="dropdown"
+              style="color: black"
+            >
+              Children
+            </a>
+
+
+            <div class="dropdown-menu megamenu dropdown-menu3">
+              <div class="custom-drop-down">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-3">
+                    <p>New arrivals</p>
+                    <li>New In</li>
+                    <li>On Sale</li>
+                    <br />
+                    <p>Shop by Design</p>
+                    <li>Dimdension 2044</li>
+                    <li>Monogram</li>
+                    <li>Love from Boo</li>
+                  </div>
+                  <div class="col-3">
+                    <p>{{ current?.t1 }}</p>
+                    <li *ngFor="let cat of current?.topwear">
+                      <a
+                        style="color: black"
+                        href="productlists/{{ cat }}/{{ cat }}"
+                        >{{ cat }}</a
+                      >
+                    </li>
+                  </div>
+                  <div class="col-5">
+                    <p>{{ current?.t2 }}</p>
+                    <li *ngFor="let cat of current?.bottomwear">
+                      <a
+                        style="color: black"
+                        href="productlists/{{ cat }}/{{ cat }}"
+                        >{{ cat }}</a
+                      >
+                    </li>
+                    <br />
+                    <p>Stationary</p>
+                  </div>
+                </div>    -->
+      
+            <!-- <a
+            class="nav-link hover2"
+            (click)="setCurrent('myaccount')"
+            data-toggle="dropdown"
+            style="color: black"
+          >
+            myaccount
+             href="myaccount"
+              id="navbarDropdownMenuLink"
+          </a> -->
+
+          <!-- <div class="right-menu"> -->
+            <li class="nav-item dropdown dropdown5" style="cursor: pointer;">
+            <a
+              class="nav-link myaccount-logo"
+              (click)="setCurrent('myaccount')"
+              data-toggle="dropdown"
+           
+             
+            >
+              
+            </a>
+            <div class="dropdown-menu dropdown-menu5" aria-labelledby="navbarDropdownMenuLink" style=" position: absolute;
+            left: -60px;
+            text-align: center;">
+              <p style="font-weight: 100; font-size: 14px;cursor: pointer;" routerLink = "wishlist/">Wishlist</p>
+              <p style="font-weight: 100; font-size: 14px;cursor: pointer;" routerLink = "myaccount/">My account</p>
+            </div>
+          </li>
+          <li class="checkout-item" style="cursor: pointer;">
+            <div>
+              <div class="checkout-cart" routerLink = "checkout/">
+                <p id="cart-count">{{ cart_count }}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+

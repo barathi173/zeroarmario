@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #EEE;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  .log {
+    width: 420px;
+    margin: 5% auto;
+    background-color: #FFF;
+    margin-bottom: 40vh;
+  
+  }
+  
+  .log h2 {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+  
+  .log .input-cont {
+    position: relative;
+    margin: 0 20px 40px;
+  }
+  
+  .log .input-cont:last-of-type {
+    margin-bottom: 30px;
+  }
+  
+  .log .input-cont input {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    color: #212121;
+    font-size: 22px;
+    font-weight: 400;
+    background: none;
+    border: none;
+  }
+  
+  .log .input-cont input:focus {
+    outline: none;
+  }
+  
+  .log .input-cont label {
+    position: absolute;
+    color: #948c8c;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+  }
+  
+  .log .input-cont input:focus+label {
+    margin-top: -20px;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    color: #bdbdbd;
+  }
+  
+  .log .border1, .log .border2 {
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .log .border1::after, .log .border1::before, .log .border2::after, .log .border2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+  }
+  
+  .log .input-cont input:focus~.border1::after, .log .input-cont input:focus~.border1::before, .log .input-cont input:focus~.border2::after, .log .input-cont input:focus~.border2::before {
+    width: 50%;
+  }
+  
+  .log .check, .log a {
+    float: left;
+    width: calc(50% - 50px);
+    display: block;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .log .check {
+    margin-left: 50px;
+  }
+  
+  
+  .log form input[type="submit"] {
+    display: block;
+    margin: 0 auto 20px;
+    border: 2px solid transparent;
+    padding: 5px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ed2553;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+  }
+  
+  
+  button {
+    background-color: black;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 0%;
+    width: 100%;
+  }
+  
+button:hover {
+  outline: none;
+  box-shadow: none;
+}
+  
+  .log .new-account a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .input-cont {
+    position: relative;
+  }
+
+  .input-cont a {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    margin-bottom: 10px; 
+    color: black; 
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    width: fit-content;
+  }
+@media only screen and (max-width:600px) {
+  .log {
+    width: 100%;
+  }
+}
+
+
+.new-user, #password-mob, .mob {
+  display: none;
+}
+@media only screen and (min-width:360px) and (max-width:767px) {
+  .log h2 {
+    font-size: 16px;
+    text-transform: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+  }
+
+  .log .forgot {
+    display: none;
+  }
+
+  .log .input-cont input {
+    border: 1px solid #CACACA;
+    background: #fff;
+  }
+
+  .create-new, #password-web, .web {
+    display: none;
+  }
+
+  .new-user, #password-mob, .mob {
+    display: block;
+  }
+
+  .new-user-container, .log .input-cont {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .new-user {
+    background-color: #FFF;
+    color: #000;
+    border: 2px solid #000;
+    text-transform: none;
+    font-weight: bold;
+  }
+
+  .inputbox {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #CACACA;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .icon-btn {
+    position: relative;
+    float: right;
+    top: -55px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-btn .iconify {
+    opacity: 0.63;
+    width: 20px;
+    height: 20px;
+  }
+
+  .authBlock, .signin {
+    width: 88vw;
+    margin: 0 auto !important;
+  }
+
+}

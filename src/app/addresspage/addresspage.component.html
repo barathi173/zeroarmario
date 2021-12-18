@@ -1,0 +1,320 @@
+<div class="container-custom" style="padding-top: 150px">
+  <app-breadcrumb category="Shopping Bag / Address"></app-breadcrumb>
+  <div class="row mt-4">
+    <div class="col-lg-4 col-md-12 col-sm-12 display-web">
+      <!-- <h5>Home/ Shopping Bag /Address</h5> -->
+      <h1 style="font-weight: bold">Products in Checkout Bag</h1>
+      <a style="color: #3876BE; font-size: 14px;" routerLink="/checkout">Edit Bag</a>
+      <hr class="liness" />
+      <app-addresspage-item
+        *ngFor="let item of items"
+        [data]="item"
+      ></app-addresspage-item>
+      <hr class="liness" />
+      <div class="row">
+        <h4 class="col-4">Subtotal</h4>
+        <div class="col-5"></div>
+        <h5 class="col-3">Rs.{{ sub_total }}</h5>
+      </div>
+      <hr class="new1" />
+      <div class="row">
+        <h4 class="col-4">Shipping</h4>
+        <div class="col-5"></div>
+        <h5 class="col-3">Rs.{{ deliver_fee }}</h5>
+      </div>
+      <hr class="new1" />
+      <div class="row">
+        <h4 class="col-4" style="font-weight: bolder">Total</h4>
+        <div class="col-5"></div>
+        <h5 class="col-3">Rs.{{ total }}</h5>
+      </div>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+      <div class="row" id="ship">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <h2 style="font-weight: bold">Shipping Address</h2>
+          <input
+            class="form-control-lg inputbox display-web"
+            id="email"
+            type="text"
+            placeholder="Email"
+            [value]="address.email || ''"
+            (input)="address.email = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox"
+            type="text"
+            placeholder="First Name"
+            [value]="address.customer_name || ''"
+            (input)="address.customer_name = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox display-mob"
+            type="text"
+            placeholder="Last Name"
+            [value]="address.customer_name || ''"
+            (input)="address.customer_name = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox display-mob"
+            type="text"
+            placeholder="House no/villa no/apt no."
+            [value]="address.address || ''"
+            (input)="address.address = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox"
+            type="text"
+            placeholder="Adress line 1"
+            [value]="address.address || ''"
+            (input)="address.address = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox"
+            type="text"
+            placeholder="Address line 2"
+            [value]="address.address_2 || ''"
+            (input)="address.address_2 = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox display-mob"
+            type="text"
+            placeholder="City"
+            [value]="address.city || ''"
+            (input)="address.city = $event.target.value"
+          />
+          <input class="form-control-lg inputbox" type="text" placeholder="State" [value]="address.state || ''"
+          (input)="address.state = $event.target.value"/>
+        </div>
+        <!-- <div class="col-lg-1">
+                 </div> -->
+        <div class="col-lg-6 col-md-12 col-sm-12 mt-md-5 mt-xs-0">
+          <input
+            class="form-control-lg inputbox display-web"
+            type="text"
+            placeholder="Phone no"
+            [value]="address.phone || ''"
+            (input)="address.phone = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox display-web"
+            type="text"
+            placeholder="Last Name"
+            [value]="address.last_name || ''"
+            (input)="address.last_name = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox width-half display-web"
+            type="text"
+            placeholder="Contact number"
+            [value]="address.door || ''"
+            (input)="address.door = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox display-web"
+            type="text"
+            placeholder="City"
+            [value]="address.city || ''"
+            (input)="address.city = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox width-half"
+            type="text"
+            placeholder="Postal code"
+            [value]="address.pincode || ''"
+            (input)="address.pincode = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox width-half display-mob"
+            type="text"
+            placeholder="Contact number"
+            [value]="address.door || ''"
+            (input)="address.door = $event.target.value"
+          />
+          <input
+            class="form-control-lg inputbox display-mob"
+            id="email"
+            type="text"
+            placeholder="Email ID"
+            [value]="address.email || ''"
+            (input)="address.email = $event.target.value"
+          />
+        </div>
+      </div>
+      <div class="mt-4 mb-5 display-mob">
+        <p style="font-size: calc(14px + 0.1vw); font-weight: bold;">Would you like to label your address</p>
+      <div class="d-flex">
+          <div class="address-label mr-3 d-flex">
+              <span class="iconify" data-icon="bx:bxs-home-heart" data-inline="false"></span>
+              <p>Home</p>
+          </div>
+          <div class="address-label ml-3 d-flex">
+              <span class="iconify" data-icon="bi:briefcase-fill" data-inline="false"></span>
+              <p>Work</p>
+          </div>
+      </div>
+          
+      </div>
+      <div class="row" id="shipping">
+        <div class="col-lg-5 col-md-12 col-sm-12">
+          <h2 style="font-weight: bolder;">Shipping Method</h2>
+          <hr class="liness" />
+          <div class="row">
+            <mat-radio-button [checked]="true"   value="1" style="padding-left: 15px; font-size: 15px; font-family: 'proxima-nova';">Standard Shipping</mat-radio-button>
+            <h5 style=" font-size: 15px; font-family: 'proxima-nova';" class="col-2">Rs.{{deliver_fee}}</h5>
+          </div>
+          <hr class="liness" />
+          <div class="order-limitations">
+            <p>
+              &#10003; Order before 18:00 to received between 1 to 3 Working
+              days
+            </p>
+            <p>
+              &#10003; Pay With Google pay,paytm, Mstercard, Visa, Paypal
+            </p>
+            <p>&#10003; Shipping Only in india</p>
+            <p>
+              &#10003; Order can be returned within 7 Days.
+            </p>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-lg-5 col-md-12 col-sm-12">
+          <h2 style="font-weight: bolder;">Payment Method</h2>
+          <hr class="liness mob-dark" />
+          <mat-radio-group aria-label="Select an option" (change)="pay($event)">
+            <div class="col-lg-5 col-md-12 col-sm-12" style="padding-left: 0px; padding-right: 0px;">
+              <mat-radio-button value="Prepaid" style="width: 100%; font-size: 15px; font-family: 'proxima-nova';">Pay Now</mat-radio-button>
+              <hr class="liness line-change"/>
+              <mat-radio-button  value="COD" style="width: 100%; font-size: 15px; font-family: 'proxima-nova';">Pay On Delivery</mat-radio-button>
+              <hr class="liness line-change"/>
+              <mat-radio-button  value="Gpay" style="width: 100%; font-size: 15px; font-family: 'proxima-nova';">Google pay/Paytm</mat-radio-button>
+            </div>
+          </mat-radio-group>
+          <hr class="liness mob-dark"/>
+          <div class="row total-price">
+            <h3 class="col-6" style="font-weight: bold;">Grand Total</h3>
+            <h3 style="font-weight: bolder;" class="col-2">Rs.{{total}}</h3>
+          </div>
+          <hr class="liness" />
+          <div class="row terms">
+            <input
+              type="checkbox"
+              style="border-radius: 50%;margin-top: 4px;padding-left: 0px; font-weight: bold"
+              class="col-1"
+            />
+            <h5 class="col-11 text-left">
+              I accept the
+              <a style="font-weight: bold">Terms & Conditions</a> and Privacy
+              Statement
+            </h5>
+            <br />
+            <div class="col-lg-4 col-md-12 col-sm-12 display-mob shopping-bag">
+              <!-- <h5>Home/ Shopping Bag /Address</h5> -->
+              <h1 class="display-web" style="font-weight: bold">Products in Checkout Bag</h1>
+              <div style="border-bottom: 1px solid #000;" class="display-mob d-flex justify-content-between">
+                <h1>Shopping Bag</h1>
+                <a style="color: #000; font-size: 14px; position: relative; top: 5px; text-decoration: underline;" routerLink="/checkout">Edit Bag</a>
+              </div>
+              
+              <a class="display-web" style="color: #3876BE; font-size: 14px;" routerLink="/checkout">Edit Bag</a>
+              <hr class="liness" />
+              <app-addresspage-item
+                *ngFor="let item of items"
+                [data]="item"
+              ></app-addresspage-item>
+              <hr class="liness" />
+              <div class="row display-web">
+                <h4 class="col-4">Subtotal</h4>
+                <div class="col-5"></div>
+                <h5 class="col-3">Rs.{{ sub_total }}</h5>
+              </div>
+              <div class="d-flex justify-content-between display-mob">
+                <h4>Delivery</h4>
+                <h5>Rs.{{ deliver_fee }}</h5>
+              </div>
+              <hr class="new1" />
+              <div class="row display-web">
+                <h4 class="col-4">Shipping</h4>
+                <div class="col-5"></div>
+                <h5 class="col-3">Rs.{{ deliver_fee }}</h5>
+              </div>
+              <div class="d-flex justify-content-between display-mob">
+                <h4>Subtotal</h4>
+                <h5>Rs.{{ sub_total }}</h5>
+              </div>
+              <hr class="new1" />
+              <div class="row display-web">
+                <h4 class="col-4" style="font-weight: bolder">Total</h4>
+                <div class="col-5"></div>
+                <h5 class="col-3">Rs.{{ total }}</h5>
+              </div>
+              <div class="d-flex justify-content-between display-mob">
+                <h4 style="font-weight: bolder">Total</h4>
+                <h5>Rs.{{ total }}</h5>
+              </div>
+              <hr class="new1 display-mob" />
+              <div class="display-mob">
+                <input type="checkbox" name="coupon" id="coupon">
+                <label class="ml-3" for="coupon">I have a coupon code</label>
+              </div>
+              <hr class="new1 display-mob" />
+            </div>
+            <button
+              (click)="deploy()"
+              class="btn btn-dark display-web"
+              style="
+                padding: 12px;
+                margin: 12px 0px;
+                font-weight: bold;
+                border-radius: 0px;
+                background-color: black;
+                font-size: 14px;
+                width: 95%;
+              "
+            >
+              Confirm Your Order
+            </button>
+            <button
+              (click)="deploy()"
+              class="btn btn-dark display-mob"
+              style="
+                padding: 12px;
+                margin: 12px 0px;
+                font-weight: bold;
+                border-radius: 0px;
+                background-color: black;
+                font-size: 14px;
+                width: 95%;
+              "
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ad-models">
+  <div class="row text-center my-5 pt-4 px-3 ordersuccess-ad-model">
+      <div class="col-3 py-0 px-0">
+        <img src="../../assets/images/png/scooter/scooter@3x.png" class="ordersuccess-ad-img" alt="Delivery" />
+        <h4 class="ordersuccess-ad-h4">FREE SHIPPING OVER Rs.1500+</h4>
+      </div>
+      <div class="col-3 py-0 px-0">
+        <img src="../../assets/images/png/arrows (1) (1)/arrows (1)@3x.png" class="ordersuccess-ad-img" alt="Return" />
+        <h4 class="ordersuccess-ad-h4">HASSLE-FREE RETURNS</h4>
+      </div>
+      <div class="col-3 py-0 px-0">
+        <img src="../../assets/images/png/battery@3x/battery@3x@3x.png" class="ordersuccess-ad-img" alt="Guarantee" />
+        <h4 class="ordersuccess-ad-h4">SATISFACTION GUARANTEED</h4>
+      </div>
+      <div class="col-3 py-0 px-0">
+        <img src="../../assets/images/png/Security-icon/Security-icon@3x.png" class="ordersuccess-ad-img" alt="Secure" />
+        <h4 class="ordersuccess-ad-h4">SECURE CHECKOUT</h4>
+      </div>
+    </div>
+    </div>

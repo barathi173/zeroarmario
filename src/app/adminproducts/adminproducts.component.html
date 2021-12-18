@@ -1,0 +1,55 @@
+      <div class="handpicked-categories" id="admin-products">
+    <div class="container-custom">
+        <div class="" style="margin:45px 0px 40px 0;">
+        <h3 class="d-inline admin-products1-h3">Products</h3>
+        <a routerLink="/admin/add-product" class="d-inline admin-prodcuts-add-button">Add new</a>
+        <!-- <a routerLink="/admin/list-product" class="d-inline admin-prodcuts-add-button">All Products</a> -->
+        <div class="main float-right">
+  
+            <!-- Actual search box -->
+            <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            
+            <!-- Another variation with a button -->
+           
+          </div>
+    </div>
+       
+        <div class="hold-category">
+          <span class="admin-prodcuts-span " style="padding-left: 5px;">All categories<span class="admin-prodcuts-value">{{this.totalCategoryCount}}</span></span>
+          <ng-container *ngFor="let data of categoryCountData; let i =index">
+            <span class="admin-prodcuts-span">{{categoryName[i]}}<span class="admin-prodcuts-value">{{data[categoryName[i]]}}</span></span>
+          </ng-container>
+        </div>
+       
+      <h3 class="admin-products-h3">All categories</h3>
+      <div class=" handpicked-img grid-container">
+        <ng-container *ngFor="let product of productimage; let j = index ">
+          <div class="product-item" (click)="navigateTo(product.cat_id)">
+            <img [src]="product.image" alt="" />
+            <h4>{{product.cat}}</h4>
+          </div>
+        </ng-container>
+       
+        <!-- <div class="col-6 col-md-6 col-lg-3" routerLink="productlists/Women/Women" style="margin-bottom: 30px;">
+            <img src="assets/images/png/categories/women.png" alt="" />
+          <h4>Women</h4>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" routerLink="productlists/Men/Men" onclick="men_btn()" style="margin-bottom: 30px;">
+          <img src="assets/images/png/categories/men.png" alt="" />
+          <h4>Men</h4>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" routerLink="productlists/Children/Children" style="margin-bottom: 30px;">
+          <img src="assets/images/png/categories/children.png" alt="" />
+          <h4>Children</h4>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" routerLink="productlists/Home/Home" style="margin-bottom: 30px;">
+          <img src="assets/images/png/categories/stationary.png" alt="" />
+          <h4>Home</h4>
+        </div> -->
+      </div>
+    </div>
+    <!-- <button type="button" onclick="loadDoc()">Change Content</button> -->
+</div>

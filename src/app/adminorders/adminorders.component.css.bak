@@ -1,0 +1,319 @@
+.admin-orders {
+  background-color: rgba(247, 248, 252, 1);
+  padding: 30px 35px 20px 22px;
+}
+.admin-orders p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.main-div,
+.orders,
+.order-details,
+.all-orders {
+  padding: 20px 2px;
+}
+.all-orders span {
+  border-radius: 20px;
+  padding: 3px 10px;
+  color: #FFF;
+  background-color: rgba(39, 194, 76, 1);
+}
+
+.all-orders span.processing {
+  background-color: #FFA152;
+}
+
+.all-orders span.cancelled {
+  background-color: #F12B2C;
+}
+.box-div {
+  display: flex;
+  justify-content: space-between;
+}
+.box-div div {
+  border: 1px solid rgba(223, 224, 235, 1);
+  background-color: rgba(255, 255, 255, 1);
+  width: 258px;
+  height: 120px;
+}
+.box-div div p {
+  position: relative;
+  top: 30px;
+}
+.box-div div :nth-child(1) {
+  color: rgba(159, 162, 180, 1);
+}
+.box-div div :nth-child(2) {
+  font-size: 16px;
+  font-weight: bold;
+}
+#cancel-btn {
+  width: 100%;
+    height: 100%;
+    color: #8F8F8F;
+    background-color: rgba(237,237,237,1);
+    cursor: default;
+}
+.icon-controls button {
+  background-color: rgba(237, 237, 237, 1);
+  width: 40px;
+}
+.order-details {
+  border: 1px solid rgba(223, 224, 235, 1);
+  background-color: rgba(255, 255, 255, 1);
+  padding: 15px;
+  margin: 25px 0;
+}
+.table thead th {
+  text-transform: uppercase;
+}
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #000;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  /* line-height: 0.375rem; */
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+  margin: 11px;
+}
+input {
+  border: none !important;
+}
+.icon-controls button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 0px 0 #ddd;
+}
+button {
+  outline: none;
+  border: none;
+}
+.borderless th,
+.borderless td {
+  border: none !important;
+  border-bottom: 1px solid #ebedf0 !important;
+}
+
+body {
+  background: #fff;
+}
+section {
+  overflow-x: hidden;
+}
+.zeroarmario-logo {
+  width: 180px;
+  margin: 35px 30px 40px 50px;
+  position: relative;
+  top: -4vh;
+  left: -0.95vw;
+}
+/* * {
+    overflow-x: hidden;
+} */
+.admin-user-span span {
+  padding: 20px 7px;
+}
+.admin-user-span a {
+  color: #000;
+  font-size: 16px;
+}
+.admin-user-span a:hover {
+  color: #000;
+  text-decoration: none;
+  /* vertical-align: super; */
+}
+.admin-user-span {
+  /* overflow: hidden; */
+  width: 100%;
+  text-align: right;
+}
+.tab-pane {
+  clear: both;
+  background-color: #f7f8fc !important;
+}
+.nav-link.active {
+  /* background: lightgray !important; */
+  /* border-radius: 0 !important; */
+  background: rgba(159, 162, 180, 0.08) !important;
+  /* opacity: 0.08; */
+  color: #000 !important;
+  /* border: none; */
+  padding: 18px 0px;
+  border-left: 2px solid transparent;
+  border-left: 20px solid black;
+}
+.admin-orders1 {
+  background: rgba(159, 162, 180, 0.08) !important;
+  cursor: pointer;
+}
+.nav-link:hover {
+  background: rgba(159, 162, 180, 0.08) !important;
+  cursor: pointer;
+}
+.nav-pills .nav-link {
+  font-size: 16px;
+  border-left: 5px solid transparent;
+  padding: 18px 0px;
+  color: #000 !important;
+  line-height: 19.49px;
+  letter-spacing: 0.2px;
+  border-radius: 0;
+}
+.zeroarmario-nav-link svg {
+  margin: 0px 24px;
+}
+.tab-pane {
+  height: 100vh;
+  /* background-color: lightgray; */
+  clear: both;
+}
+
+.admin-home-dropdown .dropdown-item {
+  font-size: 16px;
+  /* margin-left:15px; */
+  /* padding-left: 42px !important; */
+}
+.admin-home-dropdown .dropdown-toggle {
+  width: 100% !important;
+  font-size: 17px;
+  border: none;
+  background-color: #fff;
+  border-radius: 0;
+}
+.admin-home-dropdown .dropdown-menu h5 {
+  font-size: 16px;
+  font-weight: bolder;
+}
+.admin-home-dropdown .dropdown-toggle::after {
+  display: none !important;
+  width: 0;
+  height: 0;
+  /* margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent; */
+}
+button:focus {
+  outline: none !important;
+}
+
+.admin-home-dropdown .dropdown-toggle {
+  width: 20%;
+  padding: 7px 10px;
+  text-align: left !important;
+}
+.tab-pane {
+  overflow: auto;
+}
+
+.orders {
+  position: relative;
+}
+
+.delete-btn-container {
+  display: none;
+  position: absolute;
+  right: 30vw;
+  top: 20px;
+}
+
+.delete-btn-container button {
+  padding: 9px 3.5vw;
+  color: #FFF;
+  background-color: #DF0024;
+}
+
+.background-change {
+  background-color: #000 !important;
+  color: #FFF !important;
+  cursor: pointer !important;
+}
+
+#v-pills-tab {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.admin-user-span {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  right: -0.95vw;
+}
+
+.admin-orders {
+  position: relative;
+ 
+}
+
+.zeroarmario-nav-link {
+  width: 96%;
+}
+
+.menu-line {
+  width: 96%;
+}
+
+.main-div {
+  padding-top: 5.5vh;
+}
+
+@media only screen and (max-width: 1400px) {
+  .zeroarmario-logo {
+    width: 150px;
+    margin: 25px 10px 40px 30px;
+    top: -3vh;
+    left: -1.3vw;
+  }
+  .nav-pills .nav-link {
+    font-size: 15px;
+    border-left: 5px solid transparent;
+    padding: 15px 0px;
+    color: #000 !important;
+    line-height: 19.49px;
+    letter-spacing: 0.2px;
+    border-radius: 0;
+  }
+  .admin-user-span {
+    right: -1.3vw;
+  }
+  .admin-user-span a {
+    font-size: 15px;
+    padding: 5px 7px;
+  }
+  .admin-user-span span {
+    padding: 0px 0px;
+  }
+}

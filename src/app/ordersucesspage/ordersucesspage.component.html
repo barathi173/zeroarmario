@@ -1,0 +1,215 @@
+<div class="thank-you-mob text-center">
+    <div class="tick-icon">
+        <i class="material-icons" id="material-1">check_circle</i>
+    </div>
+<div class="message">
+   <h1 style="font-weight: bolder; margin-bottom: 0px;" >We got it, Thank you for your order!</h1>
+   <h5 style="font-weight:lighter;">It's Ordered, Check your inbox shortly for a confirmation email </h5>
+</div>
+</div>
+<div class="container-1">
+    <div class="row">
+    <div class="col-lg-7 col-xs-12">
+        <div class="row thank-you">
+            <div class="col-1">
+                <i class="material-icons" id="material-1">check_circle</i>
+            </div>
+        <div class="col-10">
+           <h1 style="color:#18A221; font-weight: bolder; margin-bottom: 0px;" >We got it, Thank you for your order!</h1>
+           <h5 style="font-weight:lighter;">It's Ordered, Check your inbox shortly for a confirmation email </h5>
+        </div>
+        </div>
+            <div class="row mt-4" style="padding-bottom: 0px;" >
+                <div class="col-12">
+                    <div class="row width-alignment">
+                        <h3 style="font-weight: bold; padding-bottom: 0px; margin-bottom: 0px;" class="col-md-4 col-xs-6">Estimated Date Of Delivery : </h3>
+                        <h4 class="col-md-4 col-xs-6" style="font-weight: lighter; padding-bottom: 0px; margin-bottom: 0px;">May 12 2020</h4>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row" style="margin-bottom: 15px;">
+                <div class="col-12">
+                    <div class="row width-alignment">
+                        <h3 style="font-weight: bold; " class="col-md-4 col-xs-6">Order Number:</h3>
+                        <h4 class="col-md-4 col-xs-6 p" style="font-weight: lighter; color:blue;">{{order.oid}}</h4>
+                    </div>
+                </div>
+            </div>
+         <div class="row">
+            <div class="col-lg-12 col-md-4 col-xs-12">
+             <button href="#" class="btn btn-dark" style="border-radius: 0px; background-color: black;">
+                Continue Shopping</button>
+             </div>
+        </div>
+        <br><br>
+        <div class="row" id="container-3">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+            <h3 style="font-weight: bold;">Delivery Address</h3>
+            <div id="address" style="padding-right: 15px; padding-left: 15px;">
+                <h2 style="font-weight: bold;">{{order.billing_customer_name}} {{order.billing_last_name}}</h2>
+                <h4>{{order.billing_address}}
+                     {{order.billing_address_2}}
+                      {{order.billing_city}}
+                      {{order.billing_state}} 
+                      {{order.billing_pincode}}</h4>
+                <h4>{{order.billing_email}} </h4>
+                <h4>{{order.billing_phone}} </h4>
+            </div>
+            <br><br>
+            </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
+            <!-- <h2>Order Confirmation</h2>
+            <div class="row" style="left:100px;">
+                <div class="col-6">
+                   <button class="btn btn-light">VISA</button>
+                </div>
+                <div class="col-6">
+                   <h5>*** **** **** 2547</h5>
+                   <h4 style="font-weight: lighter;">Exp: 02/2028</h4>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="mb-0" style="font-weight: bold;">Order Confirmation</h3>
+                    <h4 style="opacity: 0.7;">Google pay</h4>
+                </div>
+                <div class="col-12 text-center">
+                    <h3 class="mb-0" style="font-weight: bold;">Shipping Method</h3>
+                    <h4 style="opacity: 0.7;">Regular Shipping</h4>
+                </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-12 checkout-mob">
+            <h2 style="font-weight: bold;">Checkout</h2>
+            <hr class="new4">
+            
+            <div *ngFor="let p of products" class="row mt-1" style="padding-top:5%;">
+                <div class="col-3">
+                    <img src="{{p.images[0]}}" alt="" style="width: 100px; height: 100px; object-fit: cover;">
+                </div>
+                <div class="col-9" style="padding-left: 32px;">
+                   <div class="row">
+                   <h4 style="font-weight: bold; margin-bottom: 0px;" class="col-8">{{p.name}}</h4>
+                   
+                   <h5 class="col-2" style="font-weight: bold; margin-bottom: 0px;">Rs.{{p.price}}</h5>
+                   </div>
+                   <h6>Size: Large</h6>
+                   <br>
+                   <h5>Qty: 1</h5>
+                </div>
+            </div>
+            <hr class="new4">
+            <div class="row">
+                <h4 class="col-8">Subtotal</h4>
+                <div class="col-2"></div>
+                <h5 class="col-2">Rs. {{order.sub_total}}</h5>
+                </div>
+            <hr class="new1">
+            <div class="row">
+                <h4 class="col-8">Discount</h4>
+                <div class="col-2"></div>
+                <h5 class="col-2">Rs. {{order.total_discount}}</h5>
+                </div>
+            <hr class="new1">
+            <div class="row">
+                <h4 class="col-8">Shipping</h4>
+                <div class="col-2"></div>
+                <h5 class="col-2">Rs. {{order.shipping_charges}}</h5>
+                </div>
+            <hr class="new1">
+            <div class="row">
+                <h4 class="col-8" style="font-weight: bolder;">Total</h4>
+                <div class="col-2"></div>
+                <h5 class="col-2">Rs. {{order.sub_total + order.shipping_charges - order.total_discount}}</h5>
+                </div>
+            
+        </div>
+
+        
+        <br><br>
+        <div class="row mx-0" >
+            <div class="col-lg-5 col-xl-5 col-sm-5  col-md-5 ml-0" id="container-4" style="padding: 15px;">
+            
+            <h3 class="font-weight-bold">Need Help?</h3>
+            <h5>Send Feedback</h5>
+            <h5>Domestic contact: 90258 90258</h5>
+            <h5>Exchange & Returns</h5>
+            <h5>Order Information</h5>
+            </div>
+            <div style="width: 40px; height: 40px;"></div>
+        <div class="col-lg-5  col-xl-5 col-sm-5  col-md-5 ml-0" id="container-5" style="padding: 15px;">
+            <img src="" alt="">
+        </div>
+        </div>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4 col-sm-12 checkout">
+        <h2 style="font-weight: bold;">Checkout</h2>
+        <hr class="new4">
+        
+        <div *ngFor="let p of products" class="row mt-1" style="padding-top:5%;">
+            <div class="col-3">
+                <img src="{{p.images[0]}}" alt="" style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+            <div class="col-9" style="padding-left: 32px;">
+               <div class="row">
+               <h4 style="font-weight: bold; margin-bottom: 0px;" class="col-8">{{p.name}}</h4>
+               
+               <h5 class="col-2" style="font-weight: bold; margin-bottom: 0px;">Rs.{{p.price}}</h5>
+               </div>
+               <h6>Size: Large</h6>
+               <br>
+               <h5>Qty: 1</h5>
+            </div>
+        </div>
+        <hr class="new4">
+        <div class="row">
+            <h4 class="col-8">Subtotal</h4>
+            <div class="col-2"></div>
+            <h5 class="col-2">Rs. {{order.sub_total}}</h5>
+            </div>
+        <hr class="new1">
+        <div class="row">
+            <h4 class="col-8">Discount</h4>
+            <div class="col-2"></div>
+            <h5 class="col-2">Rs. {{order.total_discount}}</h5>
+            </div>
+        <hr class="new1">
+        <div class="row">
+            <h4 class="col-8">Shipping</h4>
+            <div class="col-2"></div>
+            <h5 class="col-2">Rs. {{order.shipping_charges}}</h5>
+            </div>
+        <hr class="new1">
+        <div class="row">
+            <h4 class="col-8" style="font-weight: bolder;">Total</h4>
+            <div class="col-2"></div>
+            <h5 class="col-2">Rs. {{order.sub_total + order.shipping_charges - order.total_discount}}</h5>
+            </div>
+        
+    </div>
+</div>
+</div>
+<div class="ad-models">
+    <div class="row text-center my-5 pt-4 px-3 ordersuccess-ad-model">
+        <div class="col-xl-3 col-lg-3 col-md-3 py-0 px-0">
+          <img src="../../assets/images/png/scooter/scooter@3x.png" class="ordersuccess-ad-img" alt="Delivery" />
+          <h4 class="ordersuccess-ad-h4">FREE SHIPPING OVER Rs.1500+</h4>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 py-0 px-0">
+          <img src="../../assets/images/png/arrows (1) (1)/arrows (1)@3x.png" class="ordersuccess-ad-img" alt="Return" />
+          <h4 class="ordersuccess-ad-h4">HASSLE-FREE RETURNS</h4>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 py-0 px-0">
+          <img src="../../assets/images/png/battery@3x/battery@3x@3x.png" class="ordersuccess-ad-img" alt="Guarantee" />
+          <h4 class="ordersuccess-ad-h4">SATISFACTION GUARANTEED</h4>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 py-0 px-0">
+          <img src="../../assets/images/png/Security-icon/Security-icon@3x.png" class="ordersuccess-ad-img" alt="Secure" />
+          <h4 class="ordersuccess-ad-h4">SECURE CHECKOUT</h4>
+        </div>
+      </div>
+      </div>

@@ -1,0 +1,26 @@
+<div class="container" style="padding-top: 140px">
+  <app-breadcrumb category="My Account / My Orders"></app-breadcrumb>
+  <div style="height: 24px"></div>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="row">
+        <h5 class="col-12" style="font-family: 'proxima-nova'; font-size: 24px;">my account</h5>
+            <a class="side-navs col-12" routerLink="/myaccount"> Account information</a>
+            <a class="side-navs col-12">Change Password</a>
+            <li class="side-navs col-12" routerLink="/myorders"> My Orders</li>
+            <a class="side-navs col-12" routerLink="/return-policy"> Help Center</a>
+            <a class="side-navs col-12">Logout</a>
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+      <h5 style="font-family: 'proxima-nova'; font-size: 24px;">My Orders</h5>
+
+      <br />
+      
+      <div class="container">
+        <app-myorder-item *ngFor="let o of orders" [data]="o"> </app-myorder-item>
+      </div>
+    </div>
+  </div>
+</div>

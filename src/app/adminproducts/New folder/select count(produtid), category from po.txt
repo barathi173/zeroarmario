@@ -1,0 +1,6 @@
+select count(produtid), category from poduct where 1 groupby category
+
+
+
+
+

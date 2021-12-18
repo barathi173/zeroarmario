@@ -1,0 +1,21 @@
+<div class="row" style="margin-bottom: 32px;">
+  <div class="col-lg-3">
+    <img (click)="move()" src="{{product.images[0]}}" style="object-fit: cover; height: 200px; width: 200px; margin-bottom: 8px;" alt="">
+  </div>
+  <div class="col-lg-4" style="padding-left: 20px;">
+    <p>{{product.category[0]}}</p>
+    <b style="font-size: 18px;">{{product.name}}</b><br>
+    <small class="text-muted float-left">Color: {{product.color}}</small> <br>
+    <small class="text-muted float-left">Size: {{data.size || 'None'}}</small> <br> 
+    <div style="height: 15px;"></div>
+    <b>Rs.{{price}}</b>
+    <div style="height: 15px;"></div>
+    <p style="font-size: 15px; font-weight: bold; text-decoration: underline; color: black;" (click)="toggleSave()">{{saved? 'Remove from wishlist' :'Add to wishlist'}}</p>
+  </div>
+  <div class="col-6 col-lg-3">
+    <small>Quantity: {{data.quantity}}</small>
+  </div>
+  <div class="col-6 col-lg-2" (click)="eject()">
+    <i  class='bx bx-x float-right'></i>
+  </div>
+</div>
