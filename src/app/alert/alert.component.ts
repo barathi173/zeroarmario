@@ -23,6 +23,8 @@ export class AlertComponent implements OnInit{
             this.message = data.message;
         }
     ngOnInit(): void {
+
+        console.log('-----------------------Changes 1--------------')
     }
     
 
