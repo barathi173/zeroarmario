@@ -13,6 +13,22 @@ export class AdminsiteComponent implements OnInit {
     console.log('-----------------------Changes 1--------------')
     console.log('-----------------------Changes 1--------------')
     console.log('-----------------------Changes 1--------------')
+
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+
+
+
+    
    }
 
   ngOnInit(): void {
