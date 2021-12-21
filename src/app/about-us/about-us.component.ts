@@ -10,6 +10,13 @@ export class AboutUsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+    console.log("========")
+
+    console.log("========")
+    console.log("========")
+    console.log("========")
+    console.log("========")
+    console.log("========")
+    }
 
 }
