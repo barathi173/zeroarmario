@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminsiteComponent implements OnInit {
 
-  constructor() {  }
+  constructor() { 
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+    console.log('-----------------------Changes 1--------------')
+   }
 
   ngOnInit(): void {
   }

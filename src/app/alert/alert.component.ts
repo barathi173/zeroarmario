@@ -25,6 +25,10 @@ export class AlertComponent implements OnInit{
     ngOnInit(): void {
 
         console.log('-----------------------Changes 1--------------')
+        console.log('-----------------------Changes 1--------------')
+        console.log('-----------------------Changes 1--------------')
+        console.log('-----------------------Changes 1--------------')
+        console.log('-----------------------Changes 1--------------')
     }
     
 
